@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script>
 tailwind.config = {
   theme: {
@@ -93,7 +93,7 @@ tailwind.config = {
   /* Mobile menu */
   .mobile-menu { transition: opacity .25s ease; }
   /* Section anchor offset for sticky nav */
-  section[id] { scroll-margin-top: 72px; }
+  section[id], div[id] { scroll-margin-top: 100px; }
   /* Table */
   .spec-table th, .spec-table td { padding: 14px 16px; text-align: left; }
   .spec-table th { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #22D3EE; font-weight: 500; }
@@ -514,9 +514,9 @@ tailwind.config = {
           <div class="micro text-[#0F172A]/60" data-i18n="ct.phone">Telefon</div>
           <div class="mt-2 contact-value font-medium">+90 212 000 00 00</div>
         </a>
-        <a class="block rounded-xl bg-white border border-[#E2E8F0] p-5 hover:border-[#22D3EE] transition contact-card" href="/cdn-cgi/l/email-protection#5831363e37183339302a3935393637282c3133763b3735">
+        <a class="block rounded-xl bg-white border border-[#E2E8F0] p-5 hover:border-[#22D3EE] transition contact-card email-link" href="#" data-user="info" data-domain="kahramanoptik.com">
           <div class="micro text-[#0F172A]/60" data-i18n="ct.email">E-posta</div>
-          <div class="mt-2 contact-value font-medium"><span class="__cf_email__" data-cfemail="e881868e87a88389809a8985898687989c8183c68b8785">[email&#160;protected]</span></div>
+          <div class="mt-2 contact-value font-medium email-display">&nbsp;</div>
         </a>
         <a class="block rounded-xl bg-white border border-[#E2E8F0] p-5 hover:border-[#22D3EE] transition sm:col-span-2 contact-card" href="https://wa.me/905000000000">
           <div class="micro text-[#0F172A]/60">WhatsApp</div>
@@ -604,7 +604,7 @@ tailwind.config = {
         <div class="micro text-[#6B7280] mb-5" data-i18n="ft.contact">İletişim</div>
         <ul class="space-y-3 text-[14px]">
           <li class="contact-value">+90 212 000 00 00</li>
-          <li class="contact-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="aac3c4ccc5eac1cbc2d8cbc7cbc4c5dadec3c184c9c5c7">[email&#160;protected]</a></li>
+          <li class="contact-value"><a class="email-link hover:text-cy transition" href="#" data-user="info" data-domain="kahramanoptik.com"><span class="email-display">&nbsp;</span></a></li>
           <li class="contact-value text-[#6B7280]">Yenibosna OSB · İstanbul</li>
         </ul>
         <div class="mt-6 flex items-center gap-3">
@@ -633,7 +633,7 @@ tailwind.config = {
 </footer>
 
 <!-- ============ APP SCRIPT ============ -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 /* ---------- PRODUCTS ---------- */
 const products = [
   {
@@ -1425,7 +1425,7 @@ function renderModalContent(id) {
           ${p.keySpecs.map(s => `<span class="text-[11px] font-mono text-cy border border-cy/40 bg-[#0F1623] rounded px-2.5 py-1">${s}</span>`).join('')}
         </div>
         <div class="mt-8 flex flex-col gap-3">
-          <a href="#iletisim" onclick="closeModal()" class="inline-flex items-center justify-center gap-2 bg-cy text-ink-900 font-medium text-[15px] px-5 py-3.5 rounded-md hover:bg-cy-soft transition">
+          <a href="#iletisim" data-quote-cta class="inline-flex items-center justify-center gap-2 bg-cy text-ink-900 font-medium text-[15px] px-5 py-3.5 rounded-md hover:bg-cy-soft transition">
             <span>${i18n[currentLang]['m.cta1']}</span><span aria-hidden="true">→</span>
           </a>
           <a href="#" class="inline-flex items-center justify-center gap-2 border border-ink-500 text-white font-medium text-[14px] px-5 py-3.5 rounded-md hover:border-cy hover:text-cy transition">
@@ -1501,6 +1501,65 @@ function renderModalContent(id) {
 }
 // expose closeModal globally (used in CTA inline onclick)
 window.closeModal = closeModal;
+
+/* ---------- TEKLİF AL (modal CTA → contact form) ---------- */
+function smoothScrollToId(id, offset) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const top = el.getBoundingClientRect().top + window.pageYOffset - (offset || 100);
+  window.scrollTo({ top, behavior: 'smooth' });
+}
+
+function handleTeklifAl(productName) {
+  const wasOpen = !!modalState.openId;
+  if (wasOpen) closeModal();
+  // Wait for modal close animation + scroll-lock release
+  setTimeout(() => {
+    const msg = document.getElementById('f-msg');
+    if (msg) {
+      const tpl = currentLang === 'tr'
+        ? `Merhaba, ${productName} hakkında teklif almak istiyorum.`
+        : `Hello, I'd like to request a quote for ${productName}.`;
+      msg.value = tpl;
+      msg.classList.remove('invalid');
+    }
+    smoothScrollToId('iletisim', 90);
+    // Give scroll a beat, then highlight & focus the name field
+    setTimeout(() => {
+      const name = document.getElementById('f-name');
+      if (name) name.focus();
+    }, 650);
+  }, wasOpen ? 240 : 0);
+}
+window.handleTeklifAl = handleTeklifAl;
+
+// Bind modal CTA inside re-rendered content
+const _origRenderModal = renderModalContent;
+renderModalContent = function(id) {
+  _origRenderModal(id);
+  const cta = modalContent.querySelector('[data-quote-cta]');
+  if (cta) {
+    const p = productById[id];
+    cta.addEventListener('click', (e) => {
+      e.preventDefault();
+      handleTeklifAl(p ? p.name : '');
+    });
+  }
+};
+
+/* ---------- EMAIL (bot-safe, no Cloudflare obfuscation) ---------- */
+function wireEmailLinks() {
+  document.querySelectorAll('.email-link').forEach(link => {
+    const user = link.dataset.user;
+    const domain = link.dataset.domain;
+    if (!user || !domain) return;
+    const email = user + '@' + domain;
+    link.setAttribute('href', 'mailto:' + email);
+    const display = link.querySelector('.email-display');
+    if (display) display.textContent = email;
+  });
+}
+wireEmailLinks();
 
 /* ---------- INIT ---------- */
 renderProducts('all');
