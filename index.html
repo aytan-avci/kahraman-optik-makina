@@ -1,0 +1,1516 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Kahraman Optik | CNC Optik Cam Kesim ve Ölçüm Sistemleri</title>
+<meta name="description" content="Gözlük üreticileri için CNC cam kesim makineleri ve optik ölçüm cihazları. 15+ yıl tecrübe, 200+ kurulu sistem, ±0.01mm hassasiyet." />
+<meta property="og:title" content="Kahraman Optik | CNC Optik Cam Kesim ve Ölçüm Sistemleri" />
+<meta property="og:description" content="Gözlük üreticileri için CNC çözümler — kesim, ölçüm, servis ve yedek parça." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%23111827%27%2F%3E%3Ccircle%20cx%3D%2716%27%20cy%3D%2716%27%20r%3D%279%27%20fill%3D%27none%27%20stroke%3D%27%2322D3EE%27%20stroke-width%3D%271.4%27%2F%3E%3Ctext%20x%3D%2716%27%20y%3D%2716.5%27%20text-anchor%3D%27middle%27%20dominant-baseline%3D%27central%27%20font-family%3D%27Inter%2C%20sans-serif%27%20font-weight%3D%27700%27%20font-size%3D%2711%27%20fill%3D%27%2322D3EE%27%3EK%3C%2Ftext%3E%3C%2Fsvg%3E" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Kahraman Optik","founder":"Sedat Kahraman","industry":"Optical Manufacturing Equipment","url":"https://kahramanoptik.example","description":"CNC optik cam kesim makineleri ve optik ölçüm cihazları üreticisi ve tedarikçisi."}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+      },
+      colors: {
+        ink: {
+          900: '#0A0F1A',
+          800: '#0F1623',
+          700: '#111827',
+          600: '#1F2937',
+          500: '#374151',
+        },
+        cy: { DEFAULT: '#22D3EE', soft: '#67E8F9' },
+      },
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: #111827; color: #fff; -webkit-font-smoothing: antialiased; }
+  .micro { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(34,211,238,0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34,211,238,0.045) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-position: -1px -1px;
+  }
+  .grid-bg-fade {
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 78%);
+            mask-image: radial-gradient(ellipse at center, #000 30%, transparent 78%);
+  }
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: -22px; height: 1px;
+    background: #22D3EE; transform: scaleX(0); transform-origin: left; transition: transform .25s ease;
+  }
+  .nav-link.active::after, .nav-link:hover::after { transform: scaleX(1); }
+  .nav-link.active { color: #fff; }
+  .btn { transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease; }
+  .btn:hover { transform: translateY(-1px); }
+  .card { transition: border-color .2s ease, transform .2s ease, background .2s ease; }
+  .card:hover { border-color: #22D3EE; transform: translateY(-2px); }
+  .placeholder-bg {
+    background-image:
+      repeating-linear-gradient(135deg, rgba(255,255,255,0.025) 0 8px, transparent 8px 16px),
+      linear-gradient(180deg, #0F1623, #0B1220);
+  }
+  /* Logo mark — inline SVG sizing */
+  .km-logo-svg { display: block; width: 100%; height: 100%; }
+  .logo-mark {
+    width: 40px; height: 40px; border-radius: 9px; background: #0F1623;
+    border: 1px solid #1F2937; display: grid; place-items: center; position: relative; padding: 4px;
+  }
+  .logo-mark.lg { width: 48px; height: 48px; padding: 5px; border-radius: 11px; }
+  /* Filter pills */
+  .pill { border: 1px solid #1F2937; color: #9CA3AF; padding: 8px 14px; border-radius: 999px; font-size: 13px; transition: all .2s ease; cursor: pointer; background: transparent; }
+  .pill:hover { border-color: #374151; color: #fff; }
+  .pill.active { border-color: #22D3EE; color: #22D3EE; }
+  /* Inputs */
+  .field { width: 100%; padding: 14px 16px; border: 1px solid #E2E8F0; background: #FFFFFF; border-radius: 8px; color: #0F172A; font-size: 15px; transition: border-color .2s ease, box-shadow .2s ease; }
+  .field:focus { outline: none; border-color: #22D3EE; box-shadow: 0 0 0 3px rgba(34,211,238,0.18); }
+  .field-label { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #475569; font-weight: 500; }
+  .field-error { color: #B91C1C; font-size: 12px; margin-top: 4px; display: none; }
+  .field.invalid { border-color: #DC2626; }
+  .field.invalid + .field-error { display: block; }
+  /* Mobile menu */
+  .mobile-menu { transition: opacity .25s ease; }
+  /* Section anchor offset for sticky nav */
+  section[id] { scroll-margin-top: 72px; }
+  /* Table */
+  .spec-table th, .spec-table td { padding: 14px 16px; text-align: left; }
+  .spec-table th { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #22D3EE; font-weight: 500; }
+  .spec-table tbody tr { border-top: 1px solid #1F2937; }
+  .spec-table tbody td:first-child { color: #9CA3AF; font-size: 13px; }
+  .spec-table tbody td { color: #fff; font-size: 14px; vertical-align: top; }
+  /* Hamburger animation */
+  .ham-line { transition: transform .25s ease, opacity .2s ease; transform-origin: center; }
+  .ham.open .l1 { transform: translateY(6px) rotate(45deg); }
+  .ham.open .l2 { opacity: 0; }
+  .ham.open .l3 { transform: translateY(-6px) rotate(-45deg); }
+
+  /* ---- Featured cards ---- */
+  .featured-card { transition: transform .25s ease, border-color .25s ease; cursor: pointer; }
+  .featured-card:hover { transform: translateY(-2px); border-color: #22D3EE; }
+  .featured-card:hover .feat-arrow { transform: translateX(4px); }
+  .feat-arrow { transition: transform .25s ease; }
+
+  /* ---- Catalog cards ---- */
+  .pcard { cursor: pointer; transition: border-color .2s ease, transform .2s ease, background .2s ease; }
+  .pcard:hover { border-color: #22D3EE; transform: translateY(-2px); background: #131c2c; }
+  .pcard:hover .pcard-link { transform: translateX(4px); }
+  .pcard-link { transition: transform .2s ease; }
+
+  /* ---- Modal ---- */
+  .modal-root { position: fixed; inset: 0; z-index: 100; display: none; }
+  .modal-root.open { display: block; }
+  .modal-backdrop {
+    position: absolute; inset: 0; background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    opacity: 0; transition: opacity .2s ease;
+  }
+  .modal-root.show .modal-backdrop { opacity: 1; }
+  .modal-dialog {
+    position: relative; max-width: 1200px; width: calc(100% - 32px);
+    margin: 40px auto; max-height: calc(100vh - 80px);
+    background: #111827; border: 0.5px solid #1F2937; border-radius: 12px;
+    overflow: hidden; display: flex; flex-direction: column;
+    opacity: 0; transform: translateY(8px) scale(.99); transition: opacity .2s ease, transform .2s ease;
+  }
+  .modal-root.show .modal-dialog { opacity: 1; transform: none; }
+  .modal-topbar {
+    position: sticky; top: 0; z-index: 5; background: #111827;
+    border-bottom: 1px solid #1F2937;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 20px;
+  }
+  .modal-body { overflow-y: auto; flex: 1; }
+  .modal-body::-webkit-scrollbar { width: 8px; }
+  .modal-body::-webkit-scrollbar-thumb { background: #1F2937; border-radius: 4px; }
+  .modal-body::-webkit-scrollbar-track { background: transparent; }
+  .modal-close {
+    width: 40px; height: 40px; display: grid; place-items: center;
+    border-radius: 8px; border: 1px solid #1F2937; color: #fff;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .modal-close:hover { border-color: #22D3EE; background: #0F1623; }
+
+  .thumb { aspect-ratio: 1/1; border: 1px solid #1F2937; border-radius: 6px; cursor: pointer; transition: border-color .2s ease; }
+  .thumb:hover { border-color: #374151; }
+  .thumb.active { border-color: #22D3EE; }
+
+  body.locked { overflow: hidden; }
+
+  /* ---- Contact info wrapping ---- */
+  .contact-card { min-width: 0; }
+  .contact-value {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    min-width: 0;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  @media (min-width: 640px) { .contact-value { font-size: 15px; } }
+</style>
+</head>
+<body class="bg-ink-700 text-white">
+
+<!-- ============ NAVBAR ============ -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 border-b border-ink-600/70 bg-ink-700/90 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[72px] flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <div class="logo-mark">
+        <svg class="km-logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
+          <path d="M3 32 Q 32 8 61 32 Q 32 56 3 32 Z" stroke="#22D3EE" stroke-width="1" opacity="0.45" stroke-linejoin="round"/>
+          <circle cx="32" cy="32" r="14.5" stroke="#22D3EE" stroke-width="1.3"/>
+          <g stroke="#22D3EE" stroke-width="1.6" stroke-linecap="round" opacity="0.9">
+            <line x1="32" y1="10.5" x2="32" y2="13.5"/>
+            <line x1="42.75" y1="13.38" x2="41.25" y2="15.97"/>
+            <line x1="50.62" y1="21.25" x2="48.03" y2="22.75"/>
+            <line x1="53.5" y1="32" x2="50.5" y2="32"/>
+            <line x1="50.62" y1="42.75" x2="48.03" y2="41.25"/>
+            <line x1="42.75" y1="50.62" x2="41.25" y2="48.03"/>
+            <line x1="32" y1="53.5" x2="32" y2="50.5"/>
+            <line x1="21.25" y1="50.62" x2="22.75" y2="48.03"/>
+            <line x1="13.38" y1="42.75" x2="15.97" y2="41.25"/>
+            <line x1="10.5" y1="32" x2="13.5" y2="32"/>
+            <line x1="13.38" y1="21.25" x2="15.97" y2="22.75"/>
+            <line x1="21.25" y1="13.38" x2="22.75" y2="15.97"/>
+          </g>
+          <circle cx="32" cy="32" r="11" fill="#0A0F1A"/>
+          <text x="32" y="32.2" text-anchor="middle" dominant-baseline="central" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="17" fill="#22D3EE">K</text>
+          <rect x="5" y="31" width="2" height="2" fill="#22D3EE" opacity="0.6"/>
+          <rect x="57" y="31" width="2" height="2" fill="#22D3EE" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="flex flex-col leading-none">
+        <span class="text-[15px] font-semibold tracking-tight">Kahraman Optik</span>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-10 text-[14px] text-[#9CA3AF]">
+      <a href="#urunler" class="nav-link" data-i18n="nav.products">Ürünler</a>
+      <a href="#servis" class="nav-link" data-i18n="nav.service">Servis</a>
+      <a href="#neden" class="nav-link" data-i18n="nav.why">Neden Biz</a>
+      <a href="#iletisim" class="nav-link" data-i18n="nav.contact">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <div class="hidden sm:flex items-center text-[12px] font-mono text-[#6B7280] border border-ink-600 rounded-md overflow-hidden">
+        <button data-lang="tr" class="lang-btn px-2.5 py-1.5 text-cy bg-ink-800">TR</button>
+        <span class="text-ink-600">|</span>
+        <button data-lang="en" class="lang-btn px-2.5 py-1.5">EN</button>
+      </div>
+      <a href="#iletisim" class="btn hidden sm:inline-flex items-center text-[13px] font-medium border border-ink-500 text-white px-4 py-2 rounded-md hover:border-cy hover:text-cy" data-i18n="nav.quote">Teklif Al</a>
+      <button id="hamBtn" class="ham lg:hidden w-10 h-10 grid place-items-center border border-ink-600 rounded-md" aria-label="Menü">
+        <div class="space-y-1.5">
+          <div class="ham-line l1 w-5 h-px bg-white"></div>
+          <div class="ham-line l2 w-5 h-px bg-white"></div>
+          <div class="ham-line l3 w-5 h-px bg-white"></div>
+        </div>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- mobile overlay -->
+<div id="mobileMenu" class="mobile-menu fixed inset-0 z-40 bg-ink-700/98 backdrop-blur opacity-0 pointer-events-none flex flex-col">
+  <div class="h-[72px]"></div>
+  <nav class="flex-1 flex flex-col px-6 py-8 gap-6 text-[28px] font-medium tracking-tight">
+    <a href="#urunler" class="mobile-link" data-i18n="nav.products">Ürünler</a>
+    <a href="#servis" class="mobile-link" data-i18n="nav.service">Servis</a>
+    <a href="#neden" class="mobile-link" data-i18n="nav.why">Neden Biz</a>
+    <a href="#iletisim" class="mobile-link" data-i18n="nav.contact">İletişim</a>
+    <div class="mt-auto pt-8 flex items-center gap-4 text-[12px] font-mono text-[#6B7280]">
+      <button data-lang="tr" class="lang-btn">TR</button>
+      <span>|</span>
+      <button data-lang="en" class="lang-btn">EN</button>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="relative pt-[136px] pb-24 lg:pt-[180px] lg:pb-32 overflow-hidden">
+  <div class="absolute inset-0 grid-bg grid-bg-fade pointer-events-none"></div>
+  <div class="relative max-w-5xl mx-auto px-5 lg:px-8 text-center">
+    <div class="reveal inline-flex items-center gap-2 border border-ink-600 rounded-full px-3 py-1.5 mb-10">
+      <span class="w-1.5 h-1.5 rounded-full bg-cy"></span>
+      <span class="micro text-[#9CA3AF]" data-i18n="hero.eyebrow">Optik üretim teknolojileri</span>
+    </div>
+    <h1 class="reveal text-[44px] sm:text-[56px] lg:text-[72px] leading-[1.02] font-medium tracking-[-0.02em]">
+      <span class="block" data-i18n="hero.t1">Optik cam işlemede</span>
+      <span class="block text-[#E5E7EB]" data-i18n="hero.t2">hassasiyetin mühendisliği</span>
+    </h1>
+    <p class="reveal mt-8 max-w-[600px] mx-auto text-[16px] leading-[1.7] text-[#9CA3AF]" data-i18n="hero.sub">
+      Gözlük üreticileri için CNC cam kesim makineleri ve optik ölçüm cihazları — modern üretimin gereksinimleri için tasarlandı.
+    </p>
+    <div class="reveal mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+      <a href="#iletisim" class="btn inline-flex items-center gap-2 bg-cy text-ink-900 font-medium text-[14px] px-5 py-3 rounded-md hover:bg-cy-soft">
+        <span data-i18n="hero.cta1">Demo Talep Et</span>
+        <span aria-hidden="true">→</span>
+      </a>
+      <a href="#urunler" class="btn inline-flex items-center gap-2 border border-ink-500 text-white font-medium text-[14px] px-5 py-3 rounded-md hover:border-white" data-i18n="hero.cta2">Ürünleri Keşfet</a>
+    </div>
+    <div class="reveal mt-16 inline-flex items-center gap-3 text-[#6B7280]">
+      <div class="h-px w-10 bg-ink-600"></div>
+      <span class="font-mono text-[11px]" data-i18n="hero.note">ISO 9001 sertifikalı üretim ortakları</span>
+      <div class="h-px w-10 bg-ink-600"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS BAND ============ -->
+<section class="border-t border-ink-600">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-14 lg:py-20">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-10 lg:gap-y-0">
+      <div class="reveal text-center lg:text-left lg:px-8 lg:border-r lg:border-ink-600 first:lg:pl-0">
+        <div class="text-[40px] lg:text-[48px] font-medium tracking-[-0.02em] leading-none">15+</div>
+        <div class="micro text-[#6B7280] mt-3" data-i18n="stat.years">Yıl tecrübe</div>
+      </div>
+      <div class="reveal text-center lg:text-left lg:px-8 lg:border-r lg:border-ink-600">
+        <div class="text-[40px] lg:text-[48px] font-medium tracking-[-0.02em] leading-none">200+</div>
+        <div class="micro text-[#6B7280] mt-3" data-i18n="stat.systems">Kurulu sistem</div>
+      </div>
+      <div class="reveal text-center lg:text-left lg:px-8 lg:border-r lg:border-ink-600">
+        <div class="text-[40px] lg:text-[48px] font-medium tracking-[-0.02em] leading-none">±0.01<span class="text-[#6B7280] text-[20px] align-middle">mm</span></div>
+        <div class="micro text-[#6B7280] mt-3" data-i18n="stat.precision">Hassasiyet</div>
+      </div>
+      <div class="reveal text-center lg:text-left lg:px-8">
+        <div class="text-[40px] lg:text-[48px] font-medium tracking-[-0.02em] leading-none">7/24</div>
+        <div class="micro text-[#6B7280] mt-3" data-i18n="stat.support">Teknik destek</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED PRODUCTS ============ -->
+<section class="bg-[#0F1623] border-t border-ink-600">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-24 lg:py-32">
+    <div class="max-w-3xl mb-12">
+      <div class="reveal micro text-cy mb-5" data-i18n="feat.eyebrow">Bu ay vurgulanan</div>
+      <h2 class="reveal text-[36px] lg:text-[44px] font-medium tracking-[-0.02em] leading-[1.1]" data-i18n="feat.title">Öne çıkan ürünler</h2>
+    </div>
+    <div id="featuredGrid" class="grid grid-cols-1 lg:grid-cols-2 gap-6"></div>
+  </div>
+</section>
+
+<!-- ============ PRODUCT CATALOG ============ -->
+<section id="urunler" class="bg-ink-800 border-t border-ink-600">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-24 lg:py-32">
+    <div class="max-w-3xl">
+      <div class="reveal micro text-cy mb-5" data-i18n="cat.eyebrow">Ürün kataloğu</div>
+      <h2 class="reveal text-[36px] lg:text-[44px] font-medium tracking-[-0.02em] leading-[1.1]" data-i18n="cat.title">Makineler ve cihazlar</h2>
+      <p class="reveal mt-5 text-[15px] text-[#9CA3AF] max-w-xl leading-[1.7]" data-i18n="cat.sub">CNC cam kesim hatları ve optik ölçüm cihazları — üretim hacminize ve hassasiyet hedeflerinize göre yapılandırılır.</p>
+    </div>
+
+    <div class="reveal mt-12 flex flex-wrap items-center gap-2" id="filterBar">
+      <button class="pill active" data-filter="all" data-i18n="cat.f.all">Tümü</button>
+      <button class="pill" data-filter="cnc-kesim" data-i18n="cat.f.cnc">CNC Kesim</button>
+      <button class="pill" data-filter="olcum" data-i18n="cat.f.measure">Ölçüm Cihazları</button>
+    </div>
+
+    <div id="productGrid" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </div>
+</section>
+
+<!-- ============ SPEC TABLE ============ -->
+<section class="bg-ink-700 border-t border-ink-600">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-24 lg:py-32">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+      <div class="reveal max-w-2xl">
+        <div class="micro text-cy mb-5" data-i18n="spec.eyebrow">Teknik karşılaştırma</div>
+        <h2 class="text-[36px] lg:text-[44px] font-medium tracking-[-0.02em] leading-[1.1]" data-i18n="spec.title">Tüm modeller, yan yana</h2>
+      </div>
+      <a href="#" class="reveal inline-flex items-center gap-2 text-cy text-[13px] font-medium hover:text-cy-soft">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v14m0 0l-5-5m5 5l5-5M5 21h14"/></svg>
+        <span data-i18n="spec.pdf">Datasheet PDF indir</span>
+      </a>
+    </div>
+    <div class="reveal overflow-x-auto border border-ink-600 rounded-xl">
+      <table class="spec-table w-full min-w-[760px]">
+        <thead>
+          <tr class="border-b border-ink-600 bg-ink-800/40">
+            <th class="text-[#6B7280]" data-i18n="spec.h.param">Parametre</th>
+            <th>KO-CNC 500X</th>
+            <th>KO-CNC 800X</th>
+            <th>KO-CNC 320 Mini</th>
+            <th>KO-Optic V2</th>
+            <th>KO-Lens Pro</th>
+            <th>KO-Vision Bench</th>
+          </tr>
+        </thead>
+        <tbody id="specBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEO DEMO ============ -->
+<section class="bg-ink-800 border-t border-ink-600">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-24 lg:py-32 grid lg:grid-cols-12 gap-12 lg:gap-16">
+    <div class="lg:col-span-5 reveal">
+      <div class="micro text-cy mb-5" data-i18n="vid.eyebrow">Canlı demolar</div>
+      <h2 class="text-[36px] lg:text-[44px] font-medium tracking-[-0.02em] leading-[1.1]" data-i18n="vid.title">Hattınızda gerçek üretim hızında</h2>
+      <p class="mt-5 text-[15px] text-[#9CA3AF] leading-[1.7] max-w-md" data-i18n="vid.sub">KO-CNC 500X üzerinde 1.8mm CR-39 lens kesimi. Çevrim süresi, sapma toleransı ve kenar kalitesi tek bir ekrandan izlenir.</p>
+      <ul class="mt-8 space-y-3 text-[13px] text-[#9CA3AF]">
+        <li class="flex items-start gap-3"><span class="text-cy mt-1">▸</span><span data-i18n="vid.b1">Operatör arayüzü ve ana kontrol panosu</span></li>
+        <li class="flex items-start gap-3"><span class="text-cy mt-1">▸</span><span data-i18n="vid.b2">Otomatik kalibrasyon ve değişim rutini</span></li>
+        <li class="flex items-start gap-3"><span class="text-cy mt-1">▸</span><span data-i18n="vid.b3">Üretim raporu ve OEE çıktısı</span></li>
+      </ul>
+    </div>
+    <div class="lg:col-span-7 reveal">
+      <div class="relative aspect-video rounded-xl border border-ink-600 placeholder-bg overflow-hidden group cursor-pointer">
+        <div class="absolute inset-0 grid place-items-center">
+          <div class="w-16 h-16 rounded-full border border-cy/60 bg-ink-900/60 grid place-items-center group-hover:bg-ink-900 group-hover:border-cy transition">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#22D3EE"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="absolute top-4 left-4 micro text-[#6B7280] font-mono">DEMO_01 · KO-CNC 500X</div>
+        <div class="absolute bottom-4 right-4 font-mono text-[11px] text-[#6B7280]">02:14</div>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-4">
+        <div class="aspect-video rounded-md border border-ink-600 placeholder-bg relative cursor-pointer hover:border-cy transition">
+          <span class="absolute bottom-2 left-2 micro text-[#9CA3AF] font-mono">KO-CNC 800X</span>
+        </div>
+        <div class="aspect-video rounded-md border border-ink-600 placeholder-bg relative cursor-pointer hover:border-cy transition">
+          <span class="absolute bottom-2 left-2 micro text-[#9CA3AF] font-mono">KO-Optic V2</span>
+        </div>
+        <div class="aspect-video rounded-md border border-ink-600 placeholder-bg relative cursor-pointer hover:border-cy transition">
+          <span class="absolute bottom-2 left-2 micro text-[#9CA3AF] font-mono">KO-Lens Pro</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section id="neden" class="bg-ink-700 border-t border-ink-600">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-24 lg:py-32">
+    <div class="max-w-2xl mb-14">
+      <div class="reveal micro text-cy mb-5" data-i18n="why.eyebrow">Neden Kahraman Optik</div>
+      <h2 class="reveal text-[36px] lg:text-[44px] font-medium tracking-[-0.02em] leading-[1.1]" data-i18n="why.title">Sahada kanıtlanmış mühendislik</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="whyGrid"></div>
+  </div>
+</section>
+
+<!-- ============ SERVICE ============ -->
+<section id="servis" class="bg-ink-800 border-t border-ink-600">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-24 lg:py-32">
+    <div class="grid lg:grid-cols-12 gap-12 mb-14">
+      <div class="lg:col-span-7 reveal">
+        <div class="micro text-cy mb-5" data-i18n="srv.eyebrow">Servis ve yedek parça</div>
+        <h2 class="text-[36px] lg:text-[44px] font-medium tracking-[-0.02em] leading-[1.1]" data-i18n="srv.title">Kurulumdan sonra da yanınızda</h2>
+      </div>
+      <p class="lg:col-span-5 reveal self-end text-[15px] text-[#9CA3AF] leading-[1.7]" data-i18n="srv.sub">Türkiye genelinde 24 saat içinde yerinde müdahale, orijinal yedek parça stoğu ve operatör eğitimi.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5" id="srvGrid"></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="bg-ink-700 border-t border-ink-600">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-24 lg:py-32 grid lg:grid-cols-12 gap-12 lg:gap-16">
+    <div class="lg:col-span-7 reveal">
+      <div class="micro text-cy mb-5" data-i18n="ab.eyebrow">Kahraman Optik hakkında</div>
+      <h2 class="text-[36px] lg:text-[44px] font-medium tracking-[-0.02em] leading-[1.1]" data-i18n="ab.title">Sedat Kahraman ve Kahraman Optik</h2>
+      <div class="mt-8 space-y-5 text-[15px] text-[#9CA3AF] leading-[1.8] max-w-2xl">
+        <p data-i18n="ab.p1">Kahraman Optik, optik cam işleme sektöründeki 15 yılı aşkın saha deneyimini, kurucu Sedat Kahraman'ın atölye seviyesindeki teknik birikimi üzerine inşa eder. Şirket; CNC cam kesim hatları, ölçüm cihazları ve teknik servis hizmetlerini tek çatı altında sunar.</p>
+        <p data-i18n="ab.p2">Anadolu'daki küçük atölyelerden ihracat odaklı büyük üretim tesislerine kadar her ölçekte üretici için yapılandırılabilir çözümler tasarlanır. Ekipman seçimi, hat kurulumu, operatör eğitimi ve önleyici bakım planı bütünleşik bir süreç olarak yürütülür.</p>
+        <p data-i18n="ab.p3">Üretici ortaklarla sürdürülen uzun vadeli iş birliği, Kahraman Optik'in teknik kararlarını ticari hedeflerin önüne koymasına imkân tanır. Her kurulum, sahaya çıkmadan önce iç laboratuvarda referans iş parçalarıyla doğrulanır.</p>
+      </div>
+    </div>
+    <aside class="lg:col-span-5 reveal">
+      <div class="border border-ink-600 rounded-xl divide-y divide-ink-600">
+        <div class="p-7">
+          <div class="micro text-[#6B7280]" data-i18n="ab.k1">Kuruluş</div>
+          <div class="mt-2 text-[36px] font-medium tracking-[-0.02em]">2009</div>
+        </div>
+        <div class="p-7">
+          <div class="micro text-[#6B7280]" data-i18n="ab.k2">Hizmet verilen üretici</div>
+          <div class="mt-2 text-[36px] font-medium tracking-[-0.02em]">120<span class="text-[#6B7280]">+</span></div>
+        </div>
+        <div class="p-7">
+          <div class="micro text-[#6B7280]" data-i18n="ab.k3">Kurulu sistem</div>
+          <div class="mt-2 text-[36px] font-medium tracking-[-0.02em]">200<span class="text-[#6B7280]">+</span></div>
+        </div>
+        <div class="p-7">
+          <div class="micro text-[#6B7280]" data-i18n="ab.k4">İhracat ülkesi</div>
+          <div class="mt-2 text-[36px] font-medium tracking-[-0.02em]">8</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ CONTACT (LIGHT) ============ -->
+<section id="iletisim" class="bg-[#F8FAFC] text-[#0F172A]">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-24 lg:py-32 grid lg:grid-cols-12 gap-12 lg:gap-16">
+    <div class="lg:col-span-7 reveal">
+      <div class="micro text-[#0F172A]/60 mb-5" data-i18n="ct.eyebrow">İletişim</div>
+      <h2 class="text-[36px] lg:text-[44px] font-medium tracking-[-0.02em] leading-[1.1] text-[#0F172A]" data-i18n="ct.title">Üretim hattınız için teklif isteyin</h2>
+      <p class="mt-5 text-[15px] text-[#475569] max-w-md leading-[1.7]" data-i18n="ct.sub">Formu doldurun, 1 iş günü içinde teknik ekibimiz size geri dönüş yapsın. Demo planlaması ve yerinde keşif ücretsizdir.</p>
+
+      <form id="contactForm" class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5" novalidate>
+        <div>
+          <label class="field-label" for="f-name" data-i18n="ct.l.name">Ad Soyad</label>
+          <input class="field mt-2" id="f-name" name="name" required minlength="2" />
+          <div class="field-error" data-i18n="ct.e.name">Adınızı girin.</div>
+        </div>
+        <div>
+          <label class="field-label" for="f-company" data-i18n="ct.l.company">Firma</label>
+          <input class="field mt-2" id="f-company" name="company" required />
+          <div class="field-error" data-i18n="ct.e.company">Firma adı gerekli.</div>
+        </div>
+        <div>
+          <label class="field-label" for="f-email" data-i18n="ct.l.email">E-posta</label>
+          <input class="field mt-2" id="f-email" name="email" type="email" required />
+          <div class="field-error" data-i18n="ct.e.email">Geçerli bir e-posta girin.</div>
+        </div>
+        <div>
+          <label class="field-label" for="f-phone" data-i18n="ct.l.phone">Telefon</label>
+          <input class="field mt-2" id="f-phone" name="phone" required pattern="[0-9 +()-]{7,}" />
+          <div class="field-error" data-i18n="ct.e.phone">Telefon numarası gerekli.</div>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label" for="f-msg" data-i18n="ct.l.msg">Mesajınız</label>
+          <textarea class="field mt-2" id="f-msg" name="message" rows="5" required minlength="10"></textarea>
+          <div class="field-error" data-i18n="ct.e.msg">Mesaj en az 10 karakter olmalı.</div>
+        </div>
+        <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+          <p class="text-[12px] text-[#64748B] max-w-sm leading-[1.6]" data-i18n="ct.kvkk">Form gönderildiğinde KVKK aydınlatma metnini kabul etmiş sayılırsınız.</p>
+          <button type="submit" class="btn inline-flex items-center gap-2 bg-[#111827] text-white font-medium text-[14px] px-6 py-3 rounded-md hover:bg-[#0F1623]">
+            <span data-i18n="ct.send">Gönder</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+        <div id="formSuccess" class="hidden sm:col-span-2 border border-[#22D3EE] bg-[#ECFEFF] text-[#0E7490] rounded-md px-4 py-3 text-[14px]" data-i18n="ct.ok">Teşekkürler. Mesajınızı aldık; 1 iş günü içinde dönüş yapacağız.</div>
+      </form>
+    </div>
+    <aside class="lg:col-span-5 reveal space-y-4">
+      <div class="rounded-xl bg-white border border-[#E2E8F0] p-7 contact-card">
+        <div class="micro text-[#0F172A]/60" data-i18n="ct.addr">Adres</div>
+        <div class="mt-3 contact-value text-[#0F172A] leading-[1.7]">Yenibosna OSB · Optik Sanayi Sitesi<br/>No: 47 / Bahçelievler · İstanbul</div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a class="block rounded-xl bg-white border border-[#E2E8F0] p-5 hover:border-[#22D3EE] transition contact-card" href="tel:+902120000000">
+          <div class="micro text-[#0F172A]/60" data-i18n="ct.phone">Telefon</div>
+          <div class="mt-2 contact-value font-medium">+90 212 000 00 00</div>
+        </a>
+        <a class="block rounded-xl bg-white border border-[#E2E8F0] p-5 hover:border-[#22D3EE] transition contact-card" href="/cdn-cgi/l/email-protection#5831363e37183339302a3935393637282c3133763b3735">
+          <div class="micro text-[#0F172A]/60" data-i18n="ct.email">E-posta</div>
+          <div class="mt-2 contact-value font-medium"><span class="__cf_email__" data-cfemail="e881868e87a88389809a8985898687989c8183c68b8785">[email&#160;protected]</span></div>
+        </a>
+        <a class="block rounded-xl bg-white border border-[#E2E8F0] p-5 hover:border-[#22D3EE] transition sm:col-span-2 contact-card" href="https://wa.me/905000000000">
+          <div class="micro text-[#0F172A]/60">WhatsApp</div>
+          <div class="mt-2 contact-value font-medium">+90 500 000 00 00</div>
+        </a>
+      </div>
+      <div class="rounded-xl overflow-hidden border border-[#E2E8F0] aspect-[5/3] relative" style="background:repeating-linear-gradient(45deg,#E2E8F0 0 8px,#F1F5F9 8px 16px)">
+        <div class="absolute inset-0 grid place-items-center text-[12px] font-mono text-[#64748B]" data-i18n="ct.map">[ Google Maps embed ]</div>
+      </div>
+      <div class="rounded-xl bg-white border border-[#E2E8F0] p-5">
+        <div class="micro text-[#0F172A]/60" data-i18n="ct.hours">Çalışma saatleri</div>
+        <div class="mt-3 text-[14px] text-[#0F172A] leading-[1.8]">
+          <div class="flex justify-between"><span data-i18n="ct.h1">Pazartesi – Cuma</span><span class="font-mono">08:30 – 18:00</span></div>
+          <div class="flex justify-between"><span data-i18n="ct.h2">Cumartesi</span><span class="font-mono">09:00 – 13:00</span></div>
+          <div class="flex justify-between"><span data-i18n="ct.h3">Teknik destek</span><span class="font-mono text-[#0E7490]">7/24</span></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ PRODUCT DETAIL MODAL ============ -->
+<div id="productModal" class="modal-root" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-dialog">
+    <div class="modal-topbar">
+      <div class="micro text-cy" id="modalCat">CNC KESİM</div>
+      <div class="hidden sm:block text-[14px] text-white font-medium" id="modalTopName">KO-CNC 500X</div>
+      <button id="modalClose" class="modal-close" aria-label="Modalı kapat">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div id="modalContent" class="px-5 lg:px-10 py-8 lg:py-10"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink-900 text-[#9CA3AF] border-t border-ink-600">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 lg:py-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-5">
+        <div class="flex items-center gap-3">
+          <div class="logo-mark lg">
+            <svg class="km-logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
+              <path d="M3 32 Q 32 8 61 32 Q 32 56 3 32 Z" stroke="#22D3EE" stroke-width="1" opacity="0.45" stroke-linejoin="round"/>
+              <circle cx="32" cy="32" r="14.5" stroke="#22D3EE" stroke-width="1.3"/>
+              <g stroke="#22D3EE" stroke-width="1.6" stroke-linecap="round" opacity="0.9">
+                <line x1="32" y1="10.5" x2="32" y2="13.5"/>
+                <line x1="42.75" y1="13.38" x2="41.25" y2="15.97"/>
+                <line x1="50.62" y1="21.25" x2="48.03" y2="22.75"/>
+                <line x1="53.5" y1="32" x2="50.5" y2="32"/>
+                <line x1="50.62" y1="42.75" x2="48.03" y2="41.25"/>
+                <line x1="42.75" y1="50.62" x2="41.25" y2="48.03"/>
+                <line x1="32" y1="53.5" x2="32" y2="50.5"/>
+                <line x1="21.25" y1="50.62" x2="22.75" y2="48.03"/>
+                <line x1="13.38" y1="42.75" x2="15.97" y2="41.25"/>
+                <line x1="10.5" y1="32" x2="13.5" y2="32"/>
+                <line x1="13.38" y1="21.25" x2="15.97" y2="22.75"/>
+                <line x1="21.25" y1="13.38" x2="22.75" y2="15.97"/>
+              </g>
+              <circle cx="32" cy="32" r="11" fill="#0A0F1A"/>
+              <text x="32" y="32.2" text-anchor="middle" dominant-baseline="central" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="17" fill="#22D3EE">K</text>
+              <rect x="5" y="31" width="2" height="2" fill="#22D3EE" opacity="0.6"/>
+              <rect x="57" y="31" width="2" height="2" fill="#22D3EE" opacity="0.6"/>
+            </svg>
+          </div>
+          <div class="text-white text-[15px] font-semibold">Kahraman Optik</div>
+        </div>
+        <p class="mt-5 text-[14px] max-w-sm leading-[1.7]" data-i18n="ft.tag">Optik cam işlemede hassasiyetin mühendisliği. CNC kesim, ölçüm ve teknik servis.</p>
+      </div>
+      <div class="lg:col-span-3">
+        <div class="micro text-[#6B7280] mb-5" data-i18n="ft.links">Hızlı bağlantılar</div>
+        <ul class="space-y-3 text-[14px]">
+          <li><a class="hover:text-cy" href="#urunler" data-i18n="nav.products">Ürünler</a></li>
+          <li><a class="hover:text-cy" href="#servis" data-i18n="nav.service">Servis</a></li>
+          <li><a class="hover:text-cy" href="#neden" data-i18n="nav.why">Neden Biz</a></li>
+          <li><a class="hover:text-cy" href="#iletisim" data-i18n="nav.contact">İletişim</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-4">
+        <div class="micro text-[#6B7280] mb-5" data-i18n="ft.contact">İletişim</div>
+        <ul class="space-y-3 text-[14px]">
+          <li class="contact-value">+90 212 000 00 00</li>
+          <li class="contact-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="aac3c4ccc5eac1cbc2d8cbc7cbc4c5dadec3c184c9c5c7">[email&#160;protected]</a></li>
+          <li class="contact-value text-[#6B7280]">Yenibosna OSB · İstanbul</li>
+        </ul>
+        <div class="mt-6 flex items-center gap-3">
+          <a href="#" class="w-9 h-9 grid place-items-center border border-ink-600 rounded-md hover:border-cy hover:text-cy" aria-label="LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.5 0h4.37v1.92h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.48 3.04 5.48 7v7.44h-4.56v-6.59c0-1.57-.03-3.59-2.19-3.59-2.19 0-2.52 1.71-2.52 3.48V22H7.72V8z"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 grid place-items-center border border-ink-600 rounded-md hover:border-cy hover:text-cy" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 grid place-items-center border border-ink-600 rounded-md hover:border-cy hover:text-cy" aria-label="YouTube">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23 7s-.2-1.6-.9-2.3c-.8-.8-1.7-.9-2.1-.9C16.7 3.5 12 3.5 12 3.5s-4.7 0-7.9.2c-.4 0-1.4.2-2.1.9C1.2 5.4 1 7 1 7S.8 9 .8 11v1.9c0 2 .2 4 .2 4s.2 1.6.9 2.3c.8.8 1.9.8 2.4.9 1.7.2 7.7.2 7.7.2s4.7 0 7.9-.2c.4 0 1.3-.2 2.1-.9.7-.7.9-2.3.9-2.3s.2-2 .2-4V11c-.1-2-.3-4-.3-4zM9.8 15.1V8.4l6.2 3.4-6.2 3.3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-14 pt-6 border-t border-ink-600 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[12px] text-[#6B7280] font-mono">
+      <div>© 2026 Kahraman Optik — Sedat Kahraman</div>
+      <div class="flex items-center gap-3">
+        <button data-lang="tr" class="lang-btn">TR</button>
+        <span>|</span>
+        <button data-lang="en" class="lang-btn">EN</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ APP SCRIPT ============ -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* ---------- PRODUCTS ---------- */
+const products = [
+  {
+    id: 'ko-cnc-500x',
+    name: 'KO-CNC 500X',
+    category: 'cnc-kesim',
+    categoryLabel: { tr: 'CNC KESİM', en: 'CNC CUTTING' },
+    shortDescription: { tr: 'Yüksek hassasiyetli endüstriyel kesim.', en: 'High-precision industrial cutting.' },
+    tagline: { tr: 'Endüstri 4.0 standartlarında çalışan referans modelimiz.', en: 'Our reference model, built for Industry 4.0 standards.' },
+    longDescription: {
+      tr: [
+        'KO-CNC 500X, gözlük üretimi için tasarlanmış orta ölçekli üretim hatlarının referans modelidir. 500×500 mm çalışma sahasında ±0.01 mm hassasiyetle çalışır; kapalı çevrim servo sistemler, yüksek frekans çekirdek ve aktif titreşim sönümleme ile uzun süreli üretim sürekliliği sağlar.',
+        'Sistem; otomatik kalibrasyon, lazerli sıfır referansı ve operatör müdahalesi gerektirmeyen takım değişimi ile donatılmıştır. Sahada beş yılı aşkın süredir görev yapan birimler; 24/7 vardiya rutininde MTBF değerini yüksek tutar.',
+        'Türkiye genelindeki yetkili servis ağı sayesinde olası bir arıza durumunda yerinde müdahale ortalama 24 saat içinde tamamlanır. Tüm yeni sistemlerde 2 yıl garanti standart olarak verilir.'
+      ],
+      en: [
+        'The KO-CNC 500X is our reference model for mid-scale eyewear production lines. It operates with ±0.01 mm precision across a 500×500 mm work envelope, with closed-loop servo systems, a high-frequency spindle and active vibration damping ensuring extended production continuity.',
+        'The system ships with automatic calibration, laser-based zero referencing and tool changes that require no operator intervention. Units running in the field for over five years maintain a high MTBF on 24/7 shift schedules.',
+        'Through our nationwide authorised service network, on-site response is typically completed within 24 hours. A standard 2-year warranty is included with every new system.'
+      ]
+    },
+    images: ['main', 'angle1', 'angle2', 'detail'],
+    keySpecs: ['±0.01mm', '500×500mm', '3.5kW'],
+    techSpecs: {
+      tr: {
+        'Kesim Boyutu': '500 × 500 mm',
+        'Hassasiyet': '±0.01 mm',
+        'Motor Gücü': '3.5 kW',
+        'Hız / Devir': '15.000 RPM',
+        'Boyutlar': '1200 × 800 × 1600 mm',
+        'Ağırlık': '450 kg',
+        'Elektrik': '380V / 50Hz / 3 faz',
+        'Garanti': '2 yıl',
+        'Üretim Yılı': '2024'
+      },
+      en: {
+        'Cutting Size': '500 × 500 mm',
+        'Precision': '±0.01 mm',
+        'Motor Power': '3.5 kW',
+        'Speed / RPM': '15,000 RPM',
+        'Dimensions': '1200 × 800 × 1600 mm',
+        'Weight': '450 kg',
+        'Electrical': '380V / 50Hz / 3 phase',
+        'Warranty': '2 years',
+        'Year': '2024'
+      }
+    },
+    monthlyViews: 47,
+    videoUrl: null,
+    datasheetUrl: null,
+    isFeatured: true,
+    isNew: false,
+    isActive: true,
+    relatedIds: ['ko-cnc-800x', 'ko-cnc-320', 'ko-optic-v2']
+  },
+  {
+    id: 'ko-cnc-800x',
+    name: 'KO-CNC 800X',
+    category: 'cnc-kesim',
+    categoryLabel: { tr: 'CNC KESİM', en: 'CNC CUTTING' },
+    shortDescription: { tr: 'Geniş tabla, yüksek hacimli üretim hattı.', en: 'Wide-bed, high-volume production line.' },
+    tagline: { tr: 'Seri üretim odaklı geniş çalışma sahası.', en: 'Wide work envelope for serial production.' },
+    longDescription: {
+      tr: [
+        'KO-CNC 800X, ihracat odaklı orta-büyük ölçekli üreticiler için tasarlanmıştır. 800×600 mm tablası ile tek seansta birden fazla iş parçası işlenebilir; çift palet sistemi sayesinde çevrim süreleri %30 oranında düşürülür.',
+        'Yüksek momentli ana mil ve doğrusal kılavuz sistemleri, ağır kesim koşullarında dahi yüksek tekrarlanabilirlik sağlar. Entegre MES bağlantısı ile üretim verileri gerçek zamanlı izlenir.',
+        'Standart paket; otomatik takım değiştirici, koruma kabini ve aspirasyon ünitesini içerir.'
+      ],
+      en: [
+        'The KO-CNC 800X is built for export-oriented medium-to-large manufacturers. Its 800×600 mm bed lets multiple workpieces be machined per cycle; a dual-pallet system cuts cycle times by 30%.',
+        'A high-torque spindle and linear guideways maintain high repeatability even under heavy cutting loads. Integrated MES connectivity streams production data in real time.',
+        'The standard package includes an automatic tool changer, enclosed guarding and a dust-extraction unit.'
+      ]
+    },
+    images: ['main', 'angle1', 'angle2', 'detail'],
+    keySpecs: ['±0.015mm', '800×600mm', '5.5kW'],
+    techSpecs: {
+      tr: {
+        'Kesim Boyutu': '800 × 600 mm',
+        'Hassasiyet': '±0.015 mm',
+        'Motor Gücü': '5.5 kW',
+        'Hız / Devir': '18.000 RPM',
+        'Boyutlar': '1800 × 1100 × 1900 mm',
+        'Ağırlık': '780 kg',
+        'Elektrik': '380V / 50Hz / 3 faz',
+        'Garanti': '2 yıl',
+        'Üretim Yılı': '2025'
+      },
+      en: {
+        'Cutting Size': '800 × 600 mm',
+        'Precision': '±0.015 mm',
+        'Motor Power': '5.5 kW',
+        'Speed / RPM': '18,000 RPM',
+        'Dimensions': '1800 × 1100 × 1900 mm',
+        'Weight': '780 kg',
+        'Electrical': '380V / 50Hz / 3 phase',
+        'Warranty': '2 years',
+        'Year': '2025'
+      }
+    },
+    monthlyViews: 62,
+    isFeatured: false, isNew: true, isActive: true,
+    relatedIds: ['ko-cnc-500x', 'ko-cnc-320', 'ko-vision-bench']
+  },
+  {
+    id: 'ko-cnc-320',
+    name: 'KO-CNC 320 Mini',
+    category: 'cnc-kesim',
+    categoryLabel: { tr: 'CNC KESİM', en: 'CNC CUTTING' },
+    shortDescription: { tr: 'Atölye tipi prototipleme ve numune üretimi.', en: 'Workshop prototyping and sample runs.' },
+    tagline: { tr: 'Küçük seri üretim ve numune işleme için kompakt çözüm.', en: 'A compact unit for small-batch and prototype work.' },
+    longDescription: {
+      tr: [
+        'KO-CNC 320 Mini, atölye ölçeğinde prototipleme ve düşük hacimli üretim için optimize edilmiştir. 320×320 mm çalışma sahasında yüksek hassasiyet korunurken cihaz, standart 220V hatta bağlanabilir.',
+        'Kompakt gövde sayesinde mevcut bir üretim hattının ek istasyonu olarak da konumlandırılabilir. Operatör öğrenme eğrisi düşüktür; eğitim ortalama yarım gün sürer.',
+        'Tüm ölçüm cihazlarımız ile uyumlu olan ortak ara yüz, hat genelinde tutarlı raporlama sağlar.'
+      ],
+      en: [
+        'The KO-CNC 320 Mini is optimised for workshop-scale prototyping and low-volume production. It maintains high precision across a 320×320 mm work envelope and runs from a standard 220V supply.',
+        'Its compact footprint also positions it well as a satellite station next to an existing line. The operator learning curve is short — training averages half a day.',
+        'A shared interface compatible with all our measurement devices keeps reporting consistent across the line.'
+      ]
+    },
+    images: ['main', 'angle1', 'angle2', 'detail'],
+    keySpecs: ['±0.01mm', '320×320mm', '1.5kW'],
+    techSpecs: {
+      tr: {
+        'Kesim Boyutu': '320 × 320 mm',
+        'Hassasiyet': '±0.01 mm',
+        'Motor Gücü': '1.5 kW',
+        'Hız / Devir': '12.000 RPM',
+        'Boyutlar': '900 × 700 × 1400 mm',
+        'Ağırlık': '210 kg',
+        'Elektrik': '220V / 50Hz / 1 faz',
+        'Garanti': '18 ay',
+        'Üretim Yılı': '2024'
+      },
+      en: {
+        'Cutting Size': '320 × 320 mm',
+        'Precision': '±0.01 mm',
+        'Motor Power': '1.5 kW',
+        'Speed / RPM': '12,000 RPM',
+        'Dimensions': '900 × 700 × 1400 mm',
+        'Weight': '210 kg',
+        'Electrical': '220V / 50Hz / 1 phase',
+        'Warranty': '18 months',
+        'Year': '2024'
+      }
+    },
+    monthlyViews: 28,
+    isFeatured: false, isNew: false, isActive: true,
+    relatedIds: ['ko-cnc-500x', 'ko-cnc-800x', 'ko-optic-v2']
+  },
+  {
+    id: 'ko-optic-v2',
+    name: 'KO-Optic V2',
+    category: 'olcum',
+    categoryLabel: { tr: 'ÖLÇÜM CİHAZI', en: 'METROLOGY' },
+    shortDescription: { tr: 'Otomatik lensometre, hat üzeri kalite kontrol.', en: 'Automatic lensmeter for inline QC.' },
+    tagline: { tr: 'Üretim sonu hızlı doğrulama için tek dokunuş.', en: 'One-touch end-of-line verification.' },
+    longDescription: {
+      tr: [
+        'KO-Optic V2, üretim hattı sonunda kalite kontrol için tasarlanmış otomatik lensometredir. Tek dokunuşla dioptri, prizma ve UV ölçümü 2 saniye altında tamamlanır.',
+        'Otomatik kalibrasyon ile günlük servis ihtiyacı ortadan kalkar. USB-C üzerinden anlık veri aktarımı yapılabilir; üretim takip yazılımlarına standart bir adaptörle entegre olur.',
+        'KO-CNC serisi makinelerin üretim çıktısını doğrulamak için referans cihaz olarak kullanılır.'
+      ],
+      en: [
+        'The KO-Optic V2 is an automated lensmeter designed for end-of-line QC. Diopter, prism and UV measurement complete in under 2 seconds with a single touch.',
+        'Automatic calibration removes the need for daily servicing. Real-time data export over USB-C plugs into existing production-tracking software via a standard adapter.',
+        'It is the reference device used to validate output from the KO-CNC series of cutters.'
+      ]
+    },
+    images: ['main', 'angle1', 'angle2', 'detail'],
+    keySpecs: ['±0.01 D', 'UV ölçüm', 'USB-C'],
+    techSpecs: {
+      tr: {
+        'Ölçüm Aralığı': '±25 D',
+        'Hassasiyet': '±0.01 D',
+        'Motor Gücü': '40 W',
+        'Hız / Devir': '< 2 sn / lens',
+        'Boyutlar': '380 × 320 × 480 mm',
+        'Ağırlık': '12 kg',
+        'Elektrik': '220V / 50Hz / 1 faz',
+        'Garanti': '2 yıl',
+        'Üretim Yılı': '2024'
+      },
+      en: {
+        'Range': '±25 D',
+        'Precision': '±0.01 D',
+        'Power': '40 W',
+        'Speed': '< 2 s / lens',
+        'Dimensions': '380 × 320 × 480 mm',
+        'Weight': '12 kg',
+        'Electrical': '220V / 50Hz / 1 phase',
+        'Warranty': '2 years',
+        'Year': '2024'
+      }
+    },
+    monthlyViews: 41,
+    isFeatured: true, isNew: false, isActive: true,
+    relatedIds: ['ko-lens-pro', 'ko-vision-bench', 'ko-cnc-500x']
+  },
+  {
+    id: 'ko-lens-pro',
+    name: 'KO-Lens Pro',
+    category: 'olcum',
+    categoryLabel: { tr: 'ÖLÇÜM CİHAZI', en: 'METROLOGY' },
+    shortDescription: { tr: 'Yüksek hassasiyetli dioptri ve prizma analizi.', en: 'High-precision diopter and prism analysis.' },
+    tagline: { tr: 'Laboratuvar düzeyinde sertifika çıktısı.', en: 'Lab-grade certificate output.' },
+    longDescription: {
+      tr: [
+        'KO-Lens Pro, sertifikalı ölçüm çıktısı gerektiren üreticiler için tasarlanmıştır. 0.001 D çözünürlükte çalışır; her ölçüm için zaman damgalı PDF raporu üretir.',
+        'Otomatik programlama özelliği ile farklı lens tipleri arasında geçiş manuel müdahale gerektirmez. Hat verisi MES ve ERP sistemlerine REST API ile entegre olur.',
+        'Akredite test laboratuvarları ve ihracat odaklı üreticiler için referans cihaz konumundadır.'
+      ],
+      en: [
+        'The KO-Lens Pro is designed for manufacturers that need certified measurement output. It operates at 0.001 D resolution and produces a time-stamped PDF report for every measurement.',
+        'Auto-programming switches between lens types with no manual intervention. Line data integrates with MES and ERP systems over a REST API.',
+        'It is the reference device for accredited test labs and export-focused manufacturers.'
+      ]
+    },
+    images: ['main', 'angle1', 'angle2', 'detail'],
+    keySpecs: ['0.001 D', 'Auto-prog', 'PDF rapor'],
+    techSpecs: {
+      tr: {
+        'Ölçüm Aralığı': '±35 D',
+        'Hassasiyet': '±0.005 D',
+        'Çözünürlük': '0.001 D',
+        'Motor Gücü': '60 W',
+        'Hız / Devir': '< 1.5 sn / lens',
+        'Boyutlar': '420 × 360 × 520 mm',
+        'Ağırlık': '15 kg',
+        'Elektrik': '220V / 50Hz / 1 faz',
+        'Garanti': '2 yıl',
+        'Üretim Yılı': '2025'
+      },
+      en: {
+        'Range': '±35 D',
+        'Precision': '±0.005 D',
+        'Resolution': '0.001 D',
+        'Power': '60 W',
+        'Speed': '< 1.5 s / lens',
+        'Dimensions': '420 × 360 × 520 mm',
+        'Weight': '15 kg',
+        'Electrical': '220V / 50Hz / 1 phase',
+        'Warranty': '2 years',
+        'Year': '2025'
+      }
+    },
+    monthlyViews: 33,
+    isFeatured: false, isNew: true, isActive: true,
+    relatedIds: ['ko-optic-v2', 'ko-vision-bench', 'ko-cnc-800x']
+  },
+  {
+    id: 'ko-vision-bench',
+    name: 'KO-Vision Bench',
+    category: 'olcum',
+    categoryLabel: { tr: 'ÖLÇÜM CİHAZI', en: 'METROLOGY' },
+    shortDescription: { tr: 'Ar-Ge ve referans ölçüm istasyonu.', en: 'R&D and reference measurement station.' },
+    tagline: { tr: 'Mikron mertebesinde optik tezgah.', en: 'Optical bench at micron-level precision.' },
+    longDescription: {
+      tr: [
+        'KO-Vision Bench, üretim hattınızı sertifikalandırmak için bir referans cihazıdır. Çift kameralı görüntü işleme sistemi ve granit gövdesi sayesinde mikron seviyesinde tekrarlanabilirlik sağlar.',
+        'Ar-Ge ekipleri için yeni lens tasarımlarının doğrulanması, üretim ekipleri için ise hat ekipmanlarının periyodik denetimi konularında en yüksek hassasiyeti sunar.',
+        'Üç yıl garanti ile teslim edilir; izlenebilirlik ve kalibrasyon raporları otomatik üretilir.'
+      ],
+      en: [
+        'The KO-Vision Bench is a reference device for certifying your production line. A dual-camera vision system on a granite base delivers micron-level repeatability.',
+        'It serves R&D teams validating new lens designs and production teams running periodic audits of line equipment at the highest precision tier.',
+        'Shipped with a 3-year warranty; traceability and calibration reports are generated automatically.'
+      ]
+    },
+    images: ['main', 'angle1', 'angle2', 'detail'],
+    keySpecs: ['0.5 µm', 'Çift kamera', 'Granit gövde'],
+    techSpecs: {
+      tr: {
+        'Tabla Boyutu': '900 × 600 mm',
+        'Hassasiyet': '±0.005 mm',
+        'Çözünürlük': '0.5 µm',
+        'Motor Gücü': '80 W',
+        'Boyutlar': '1100 × 800 × 1300 mm',
+        'Ağırlık': '320 kg',
+        'Elektrik': '220V / 50Hz / 1 faz',
+        'Garanti': '3 yıl',
+        'Üretim Yılı': '2025'
+      },
+      en: {
+        'Bed Size': '900 × 600 mm',
+        'Precision': '±0.005 mm',
+        'Resolution': '0.5 µm',
+        'Power': '80 W',
+        'Dimensions': '1100 × 800 × 1300 mm',
+        'Weight': '320 kg',
+        'Electrical': '220V / 50Hz / 1 phase',
+        'Warranty': '3 years',
+        'Year': '2025'
+      }
+    },
+    monthlyViews: 19,
+    isFeatured: false, isNew: false, isActive: true,
+    relatedIds: ['ko-lens-pro', 'ko-optic-v2', 'ko-cnc-800x']
+  }
+];
+const productById = Object.fromEntries(products.map(p => [p.id, p]));
+
+/* ---------- WHY US ---------- */
+const whyItems = [
+  { i: 'target', t: { tr: 'Hassasiyet', en: 'Precision' }, d: { tr: '±0.01 mm tekrarlanabilirlik, sahada doğrulanmış.', en: '±0.01 mm repeatability, field-validated.' } },
+  { i: 'bolt',   t: { tr: 'Hız', en: 'Throughput' }, d: { tr: 'Hat tasarımı çevrim süresine göre konfigüre edilir.', en: 'Line design configured for cycle time targets.' } },
+  { i: 'shield', t: { tr: 'Garanti', en: 'Warranty' }, d: { tr: '24 aya kadar genişletilebilir garanti planı.', en: 'Extendable warranty plan up to 24 months.' } },
+  { i: 'head',   t: { tr: '7/24 Destek', en: '24/7 Support' }, d: { tr: 'Uzaktan tanı + 24 saatte yerinde müdahale.', en: 'Remote diagnostics + 24-hour on-site response.' } },
+];
+
+const ICONS = {
+  target: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>',
+  bolt:   '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z"/></svg>',
+  shield: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2.2 2.2L15 10.4"/></svg>',
+  head:   '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 13a8 8 0 1116 0v4a2 2 0 01-2 2h-1v-6h3"/><path d="M4 13v4a2 2 0 002 2h1v-6H4"/></svg>',
+  wrench: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 015.5 5.1l-9.7 9.7a2 2 0 11-2.8-2.8l9.7-9.7a4 4 0 01-2.7-2.3z"/></svg>',
+  box:    '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg>',
+  remote: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M8 12h.01M12 12h.01M16 12h.01M6 16h12"/></svg>',
+};
+
+/* ---------- SERVICES ---------- */
+const services = [
+  { i: 'wrench', t: { tr: 'Yerinde Servis', en: 'On-site Service' }, d: { tr: 'Türkiye geneli teknik müdahale, 24 saat içinde sahaya intikal.', en: 'Nationwide technical response, on-site within 24 hours.' } },
+  { i: 'box',    t: { tr: 'Orijinal Yedek Parça', en: 'Original Spare Parts' }, d: { tr: 'Kritik parçalarda stoklu temin ve hızlı tedarik.', en: 'In-stock critical parts and fast procurement.' } },
+  { i: 'remote', t: { tr: 'Uzaktan Destek & Eğitim', en: 'Remote Support & Training' }, d: { tr: 'Online operatör eğitimi ve canlı arıza analizi.', en: 'Online operator training and live fault analysis.' } },
+];
+
+/* ---------- I18N ---------- */
+const i18n = {
+  tr: {
+    'nav.tagline': 'Optik üretim teknolojileri',
+    'nav.products': 'Ürünler', 'nav.service': 'Servis', 'nav.why': 'Neden Biz', 'nav.contact': 'İletişim', 'nav.quote': 'Teklif Al',
+    'hero.eyebrow': 'Optik üretim teknolojileri',
+    'hero.t1': 'Optik cam işlemede', 'hero.t2': 'hassasiyetin mühendisliği',
+    'hero.sub': 'Gözlük üreticileri için CNC cam kesim makineleri ve optik ölçüm cihazları — modern üretimin gereksinimleri için tasarlandı.',
+    'hero.cta1': 'Demo Talep Et', 'hero.cta2': 'Ürünleri Keşfet',
+    'hero.note': 'ISO 9001 sertifikalı üretim ortakları',
+    'stat.years': 'Yıl tecrübe', 'stat.systems': 'Kurulu sistem', 'stat.precision': 'Hassasiyet', 'stat.support': 'Teknik destek',
+    'cat.eyebrow': 'Ürün kataloğu', 'cat.title': 'Makineler ve cihazlar',
+    'cat.sub': 'CNC cam kesim hatları ve optik ölçüm cihazları — üretim hacminize ve hassasiyet hedeflerinize göre yapılandırılır.',
+    'cat.f.all': 'Tümü', 'cat.f.cnc': 'CNC Kesim', 'cat.f.measure': 'Ölçüm Cihazları',
+    'card.details': 'Detaylar', 'card.new': 'YENİ',
+    'feat.eyebrow': 'Bu ay vurgulanan', 'feat.title': 'Öne çıkan ürünler', 'feat.cta': 'Detayları Gör',
+    'm.close': 'Modalı kapat',
+    'm.tech': 'Teknik Özellikler',
+    'm.desc': 'Ürün Açıklaması',
+    'm.video': 'Demo Videosu',
+    'm.related': 'İlgili Ürünler',
+    'm.cta1': 'Teklif Al',
+    'm.cta2': 'Datasheet PDF İndir',
+    'm.views': 'Bu ay {n} görüntüleme',
+    'spec.eyebrow': 'Teknik karşılaştırma', 'spec.title': 'Tüm modeller, yan yana', 'spec.pdf': 'Datasheet PDF indir',
+    'spec.h.param': 'Parametre',
+    'spec.r.size': 'Kesim/ölçüm boyutu', 'spec.r.prec': 'Hassasiyet', 'spec.r.pwr': 'Motor gücü', 'spec.r.spd': 'Hız', 'spec.r.war': 'Garanti',
+    'vid.eyebrow': 'Canlı demolar', 'vid.title': 'Hattınızda gerçek üretim hızında',
+    'vid.sub': 'KO-CNC 500X üzerinde 1.8mm CR-39 lens kesimi. Çevrim süresi, sapma toleransı ve kenar kalitesi tek bir ekrandan izlenir.',
+    'vid.b1': 'Operatör arayüzü ve ana kontrol panosu',
+    'vid.b2': 'Otomatik kalibrasyon ve değişim rutini',
+    'vid.b3': 'Üretim raporu ve OEE çıktısı',
+    'why.eyebrow': 'Neden Kahraman Optik', 'why.title': 'Sahada kanıtlanmış mühendislik',
+    'srv.eyebrow': 'Servis ve yedek parça', 'srv.title': 'Kurulumdan sonra da yanınızda',
+    'srv.sub': 'Türkiye genelinde 24 saat içinde yerinde müdahale, orijinal yedek parça stoğu ve operatör eğitimi.',
+    'srv.cta': 'İletişime Geç',
+    'ab.eyebrow': 'Kahraman Optik hakkında', 'ab.title': 'Sedat Kahraman ve Kahraman Optik',
+    'ab.p1': "Kahraman Optik, optik cam işleme sektöründeki 15 yılı aşkın saha deneyimini, kurucu Sedat Kahraman'ın atölye seviyesindeki teknik birikimi üzerine inşa eder. Şirket; CNC cam kesim hatları, ölçüm cihazları ve teknik servis hizmetlerini tek çatı altında sunar.",
+    'ab.p2': "Anadolu'daki küçük atölyelerden ihracat odaklı büyük üretim tesislerine kadar her ölçekte üretici için yapılandırılabilir çözümler tasarlanır. Ekipman seçimi, hat kurulumu, operatör eğitimi ve önleyici bakım planı bütünleşik bir süreç olarak yürütülür.",
+    'ab.p3': "Üretici ortaklarla sürdürülen uzun vadeli iş birliği, Kahraman Optik'in teknik kararlarını ticari hedeflerin önüne koymasına imkân tanır. Her kurulum, sahaya çıkmadan önce iç laboratuvarda referans iş parçalarıyla doğrulanır.",
+    'ab.k1': 'Kuruluş', 'ab.k2': 'Hizmet verilen üretici', 'ab.k3': 'Kurulu sistem', 'ab.k4': 'İhracat ülkesi',
+    'ct.eyebrow': 'İletişim', 'ct.title': 'Üretim hattınız için teklif isteyin',
+    'ct.sub': 'Formu doldurun, 1 iş günü içinde teknik ekibimiz size geri dönüş yapsın. Demo planlaması ve yerinde keşif ücretsizdir.',
+    'ct.l.name': 'Ad Soyad', 'ct.l.company': 'Firma', 'ct.l.email': 'E-posta', 'ct.l.phone': 'Telefon', 'ct.l.msg': 'Mesajınız',
+    'ct.e.name': 'Adınızı girin.', 'ct.e.company': 'Firma adı gerekli.', 'ct.e.email': 'Geçerli bir e-posta girin.', 'ct.e.phone': 'Telefon numarası gerekli.', 'ct.e.msg': 'Mesaj en az 10 karakter olmalı.',
+    'ct.kvkk': 'Form gönderildiğinde KVKK aydınlatma metnini kabul etmiş sayılırsınız.',
+    'ct.send': 'Gönder', 'ct.ok': 'Teşekkürler. Mesajınızı aldık; 1 iş günü içinde dönüş yapacağız.',
+    'ct.addr': 'Adres', 'ct.phone': 'Telefon', 'ct.email': 'E-posta',
+    'ct.map': '[ Google Maps embed ]',
+    'ct.hours': 'Çalışma saatleri', 'ct.h1': 'Pazartesi – Cuma', 'ct.h2': 'Cumartesi', 'ct.h3': 'Teknik destek',
+    'ft.tag': 'Optik cam işlemede hassasiyetin mühendisliği. CNC kesim, ölçüm ve teknik servis.',
+    'ft.links': 'Hızlı bağlantılar', 'ft.contact': 'İletişim',
+  },
+  en: {
+    'nav.tagline': 'Optical manufacturing tech',
+    'nav.products': 'Products', 'nav.service': 'Service', 'nav.why': 'Why Us', 'nav.contact': 'Contact', 'nav.quote': 'Get a Quote',
+    'hero.eyebrow': 'Optical manufacturing technologies',
+    'hero.t1': 'Engineering precision', 'hero.t2': 'for optical glass machining',
+    'hero.sub': 'CNC glass cutting machines and optical measurement devices for eyewear manufacturers — built for modern production requirements.',
+    'hero.cta1': 'Request a Demo', 'hero.cta2': 'Explore Products',
+    'hero.note': 'ISO 9001 certified manufacturing partners',
+    'stat.years': 'Years of experience', 'stat.systems': 'Installed systems', 'stat.precision': 'Precision', 'stat.support': 'Technical support',
+    'cat.eyebrow': 'Product catalog', 'cat.title': 'Machines and devices',
+    'cat.sub': 'CNC glass cutting lines and optical measurement devices — configured to your production volume and precision targets.',
+    'cat.f.all': 'All', 'cat.f.cnc': 'CNC Cutting', 'cat.f.measure': 'Measurement',
+    'card.details': 'Details', 'card.new': 'NEW',
+    'feat.eyebrow': 'Highlighted this month', 'feat.title': 'Featured products', 'feat.cta': 'View Details',
+    'm.close': 'Close modal',
+    'm.tech': 'Technical Specifications',
+    'm.desc': 'Product Description',
+    'm.video': 'Demo Video',
+    'm.related': 'Related Products',
+    'm.cta1': 'Get a Quote',
+    'm.cta2': 'Download Datasheet PDF',
+    'm.views': '{n} views this month',
+    'spec.eyebrow': 'Technical comparison', 'spec.title': 'All models, side by side', 'spec.pdf': 'Download datasheet PDF',
+    'spec.h.param': 'Parameter',
+    'spec.r.size': 'Cutting / measurement size', 'spec.r.prec': 'Precision', 'spec.r.pwr': 'Motor power', 'spec.r.spd': 'Speed', 'spec.r.war': 'Warranty',
+    'vid.eyebrow': 'Live demos', 'vid.title': 'Real production speed, on your line',
+    'vid.sub': '1.8mm CR-39 lens cutting on the KO-CNC 500X. Cycle time, deviation tolerance and edge quality — all from one screen.',
+    'vid.b1': 'Operator interface and main control panel',
+    'vid.b2': 'Automatic calibration and changeover routine',
+    'vid.b3': 'Production report and OEE output',
+    'why.eyebrow': 'Why Kahraman Optik', 'why.title': 'Field-proven engineering',
+    'srv.eyebrow': 'Service and spare parts', 'srv.title': 'With you after installation, too',
+    'srv.sub': 'Nationwide 24-hour on-site response, original spare-parts stock and operator training.',
+    'srv.cta': 'Get in touch',
+    'ab.eyebrow': 'About Kahraman Optik', 'ab.title': 'Sedat Kahraman and Kahraman Optik',
+    'ab.p1': "Kahraman Optik builds on 15+ years of field experience in optical glass machining, founded on workshop-level technical depth from founder Sedat Kahraman. The company brings CNC glass cutting lines, measurement devices and technical service under a single roof.",
+    'ab.p2': "Configurable solutions are designed for every scale of manufacturer — from small Anatolian workshops to export-oriented production facilities. Equipment selection, line setup, operator training and preventive maintenance are run as an integrated process.",
+    'ab.p3': "Long-term collaborations with manufacturing partners let Kahraman Optik keep technical decisions ahead of commercial targets. Every installation is validated in-house on reference parts before going on-site.",
+    'ab.k1': 'Founded', 'ab.k2': 'Manufacturers served', 'ab.k3': 'Installed systems', 'ab.k4': 'Export countries',
+    'ct.eyebrow': 'Contact', 'ct.title': 'Request a quote for your production line',
+    'ct.sub': 'Fill out the form and our technical team will respond within 1 business day. Demo scheduling and on-site survey are free of charge.',
+    'ct.l.name': 'Full name', 'ct.l.company': 'Company', 'ct.l.email': 'Email', 'ct.l.phone': 'Phone', 'ct.l.msg': 'Your message',
+    'ct.e.name': 'Please enter your name.', 'ct.e.company': 'Company name required.', 'ct.e.email': 'Enter a valid email.', 'ct.e.phone': 'Phone number required.', 'ct.e.msg': 'Message must be at least 10 characters.',
+    'ct.kvkk': 'By submitting the form you accept our privacy notice.',
+    'ct.send': 'Send', 'ct.ok': 'Thanks. We received your message and will respond within 1 business day.',
+    'ct.addr': 'Address', 'ct.phone': 'Phone', 'ct.email': 'Email',
+    'ct.map': '[ Google Maps embed ]',
+    'ct.hours': 'Working hours', 'ct.h1': 'Monday – Friday', 'ct.h2': 'Saturday', 'ct.h3': 'Technical support',
+    'ft.tag': 'Engineering precision for optical glass machining. CNC cutting, measurement and technical service.',
+    'ft.links': 'Quick links', 'ft.contact': 'Contact',
+  }
+};
+
+let currentLang = 'tr';
+
+function applyLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (i18n[lang] && i18n[lang][key] != null) el.textContent = i18n[lang][key];
+  });
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    if (b.dataset.lang === lang) { b.classList.add('text-cy', 'bg-ink-800'); }
+    else { b.classList.remove('text-cy', 'bg-ink-800'); }
+  });
+  renderProducts(currentFilter);
+  renderFeatured();
+  renderSpecTable();
+  renderWhy();
+  renderServices();
+  if (modalState.openId) renderModalContent(modalState.openId);
+}
+
+/* ---------- RENDER: PRODUCTS ---------- */
+let currentFilter = 'all';
+
+function imgPlaceholder(name, label, ratio) {
+  const aspect = ratio || '4/3';
+  return `
+    <div class="relative w-full placeholder-bg border-b border-ink-600 flex items-center justify-center" style="aspect-ratio:${aspect}">
+      <div class="font-mono text-[11px] text-[#6B7280] tracking-wider">${name.replace(/\s+/g,'_').toUpperCase()}_${label}.JPG</div>
+    </div>
+  `;
+}
+
+function renderProducts(filter) {
+  currentFilter = filter;
+  const grid = document.getElementById('productGrid');
+  const items = (filter === 'all') ? products.filter(p => p.isActive) : products.filter(p => p.category === filter && p.isActive);
+  grid.innerHTML = items.map(p => {
+    const cat = p.categoryLabel[currentLang];
+    const desc = p.shortDescription[currentLang];
+    const badge = p.isNew ? `<span class="absolute top-3 right-3 micro bg-cy text-ink-900 px-2 py-1 rounded font-semibold z-10">${i18n[currentLang]['card.new']}</span>` : '';
+    return `
+      <article class="pcard relative border border-ink-600 rounded-xl bg-ink-700 overflow-hidden flex flex-col" data-product-id="${p.id}" tabindex="0" role="button" aria-label="${p.name}">
+        ${badge}
+        ${imgPlaceholder(p.name, 'main', '4/3')}
+        <div class="p-5 flex flex-col gap-2">
+          <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#22D3EE;font-weight:500;">${cat}</div>
+          <h3 class="text-[16px] font-medium text-white">${p.name}</h3>
+          <p class="text-[13px] text-[#9CA3AF] leading-[1.5]">${desc}</p>
+          <div class="mt-3 pt-4 border-t border-ink-600 flex items-center justify-between">
+            <span class="font-mono text-[10px] text-[#6B7280] tracking-wider">${p.id.toUpperCase()}</span>
+            <span class="text-cy text-[13px] font-medium pcard-link inline-flex items-center gap-1.5">
+              ${i18n[currentLang]['card.details']} <span aria-hidden="true">→</span>
+            </span>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join('');
+  // wire clicks
+  grid.querySelectorAll('[data-product-id]').forEach(card => {
+    card.addEventListener('click', () => openModal(card.dataset.productId, card));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card.dataset.productId, card); }
+    });
+  });
+}
+
+/* ---------- RENDER: FEATURED ---------- */
+function renderFeatured() {
+  const grid = document.getElementById('featuredGrid');
+  const items = products.filter(p => p.isFeatured && p.isActive);
+  grid.innerHTML = items.map(p => {
+    const cat = p.categoryLabel[currentLang];
+    const tag = p.tagline[currentLang];
+    return `
+      <article class="featured-card relative border border-ink-600 rounded-xl bg-ink-700 overflow-hidden flex flex-col" data-product-id="${p.id}" tabindex="0" role="button" aria-label="${p.name}">
+        ${imgPlaceholder(p.name, 'hero', '16/9')}
+        <div class="p-7 lg:p-9 flex flex-col gap-4">
+          <div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#22D3EE;font-weight:500;">${cat}</div>
+          <h3 class="text-[24px] lg:text-[28px] font-medium text-white tracking-[-0.01em] leading-[1.2]">${p.name}</h3>
+          <p class="text-[14px] lg:text-[15px] text-[#9CA3AF] leading-[1.6]">${tag}</p>
+          <div class="flex flex-wrap gap-2 mt-1">
+            ${p.keySpecs.map(s => `<span class="text-[11px] font-mono text-cy border border-cy/40 bg-[#0F1623] rounded px-2.5 py-1">${s}</span>`).join('')}
+          </div>
+          <div class="mt-3 flex items-center justify-between gap-3">
+            <span class="inline-flex items-center gap-2 bg-cy text-ink-900 font-medium text-[14px] px-5 py-3 rounded-md feat-arrow-wrap">
+              <span>${i18n[currentLang]['feat.cta']}</span>
+              <span aria-hidden="true" class="feat-arrow">→</span>
+            </span>
+            <span class="font-mono text-[10px] text-[#6B7280] tracking-wider">${p.id.toUpperCase()}</span>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join('');
+  grid.querySelectorAll('[data-product-id]').forEach(card => {
+    card.addEventListener('click', () => openModal(card.dataset.productId, card));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card.dataset.productId, card); }
+    });
+  });
+}
+
+/* ---------- RENDER: SPEC TABLE ---------- */
+function renderSpecTable() {
+  // Build dynamic rows from the union of techSpecs keys per product (using TR labels in TR mode)
+  const allCols = products.slice(0, 6);
+  const keys = ['size','prec','pwr','spd','war'];
+  const labelMap = {
+    size: { tr: 'Kesim Boyutu',     en: 'Cutting Size' },
+    prec: { tr: 'Hassasiyet',       en: 'Precision' },
+    pwr:  { tr: 'Motor Gücü',       en: 'Motor Power' },
+    spd:  { tr: 'Hız / Devir',      en: 'Speed' },
+    war:  { tr: 'Garanti',          en: 'Warranty' },
+  };
+  // pull a value from a product's techSpecs by best-effort key
+  function pull(p, key) {
+    const s = p.techSpecs[currentLang] || p.techSpecs.tr;
+    const want = {
+      size: ['Kesim Boyutu','Tabla Boyutu','Ölçüm Aralığı','Cutting Size','Bed Size','Range'],
+      prec: ['Hassasiyet','Precision'],
+      pwr:  ['Motor Gücü','Power'],
+      spd:  ['Hız / Devir','Speed','Speed / RPM'],
+      war:  ['Garanti','Warranty']
+    }[key];
+    for (const k of want) if (s[k]) return s[k];
+    return '—';
+  }
+  // Header
+  const thead = document.querySelector('#productGrid').parentElement; // unused, just safety
+  const headRow = `
+    <tr class="border-b border-ink-600 bg-ink-800/40">
+      <th class="text-[#6B7280]">${i18n[currentLang]['spec.h.param']}</th>
+      ${allCols.map(p => `<th>${p.name}</th>`).join('')}
+    </tr>`;
+  const headEl = document.querySelector('table.spec-table thead');
+  if (headEl) headEl.innerHTML = headRow;
+
+  document.getElementById('specBody').innerHTML = keys.map(k => `
+    <tr>
+      <td>${labelMap[k][currentLang]}</td>
+      ${allCols.map(p => `<td>${pull(p, k)}</td>`).join('')}
+    </tr>
+  `).join('');
+}
+
+/* ---------- RENDER: WHY / SERVICES ---------- */
+function renderWhy() {
+  document.getElementById('whyGrid').innerHTML = whyItems.map(w => `
+    <div class="card border border-ink-600 rounded-xl bg-ink-800 p-7">
+      <div class="text-cy">${ICONS[w.i]}</div>
+      <h3 class="mt-6 text-[18px] font-medium text-white">${w.t[currentLang]}</h3>
+      <p class="mt-3 text-[13px] text-[#9CA3AF] leading-[1.7]">${w.d[currentLang]}</p>
+    </div>
+  `).join('');
+}
+function renderServices() {
+  document.getElementById('srvGrid').innerHTML = services.map(s => `
+    <div class="card border border-ink-600 rounded-xl bg-ink-700 p-8">
+      <div class="text-cy">${ICONS[s.i]}</div>
+      <h3 class="mt-6 text-[20px] font-medium text-white tracking-[-0.01em]">${s.t[currentLang]}</h3>
+      <p class="mt-3 text-[14px] text-[#9CA3AF] leading-[1.7]">${s.d[currentLang]}</p>
+      <a href="#iletisim" class="mt-7 inline-flex items-center gap-2 text-cy text-[13px] font-medium hover:gap-3 transition-all">
+        ${i18n[currentLang]['srv.cta']} <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  `).join('');
+}
+
+/* ---------- FILTER ---------- */
+document.getElementById('filterBar').addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-filter]');
+  if (!btn) return;
+  document.querySelectorAll('#filterBar .pill').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  renderProducts(btn.dataset.filter);
+});
+
+/* ---------- LANG ---------- */
+document.querySelectorAll('.lang-btn').forEach(b => {
+  b.addEventListener('click', () => applyLang(b.dataset.lang));
+});
+
+/* ---------- MOBILE MENU ---------- */
+const ham = document.getElementById('hamBtn');
+const mm = document.getElementById('mobileMenu');
+function setMenu(open) {
+  ham.classList.toggle('open', open);
+  mm.classList.toggle('opacity-0', !open);
+  mm.classList.toggle('pointer-events-none', !open);
+  document.documentElement.style.overflow = open ? 'hidden' : '';
+}
+ham.addEventListener('click', () => setMenu(!ham.classList.contains('open')));
+document.querySelectorAll('.mobile-link').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+/* ---------- SCROLL SPY ---------- */
+const sections = ['urunler', 'servis', 'neden', 'iletisim'].map(id => document.getElementById(id));
+const navLinks = document.querySelectorAll('header .nav-link');
+function spy() {
+  const y = window.scrollY + 120;
+  let active = null;
+  for (const s of sections) {
+    if (s && s.offsetTop <= y) active = s.id;
+  }
+  navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + active));
+}
+window.addEventListener('scroll', spy, { passive: true });
+
+/* ---------- REVEAL ---------- */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ---------- FORM ---------- */
+const form = document.getElementById('contactForm');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let ok = true;
+  ['f-name', 'f-company', 'f-email', 'f-phone', 'f-msg'].forEach(id => {
+    const el = document.getElementById(id);
+    let valid = el.checkValidity();
+    if (id === 'f-email') {
+      valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
+    }
+    el.classList.toggle('invalid', !valid);
+    if (!valid) ok = false;
+  });
+  if (ok) {
+    document.getElementById('formSuccess').classList.remove('hidden');
+    form.querySelectorAll('input, textarea').forEach(i => i.value = '');
+  }
+});
+['f-name','f-company','f-email','f-phone','f-msg'].forEach(id => {
+  document.getElementById(id).addEventListener('input', e => e.target.classList.remove('invalid'));
+});
+
+/* ---------- MODAL ---------- */
+const modalState = { openId: null, returnFocus: null, activeImageIdx: 0 };
+const modalRoot = document.getElementById('productModal');
+const modalContent = document.getElementById('modalContent');
+const modalCloseBtn = document.getElementById('modalClose');
+const modalCatEl = document.getElementById('modalCat');
+const modalTopName = document.getElementById('modalTopName');
+
+function openModal(id, triggerEl) {
+  if (!productById[id]) return;
+  modalState.openId = id;
+  modalState.returnFocus = triggerEl || null;
+  modalState.activeImageIdx = 0;
+  renderModalContent(id);
+  modalRoot.classList.add('open');
+  modalRoot.setAttribute('aria-hidden', 'false');
+  // double rAF so transitions trigger from "display:none" → block
+  requestAnimationFrame(() => requestAnimationFrame(() => modalRoot.classList.add('show')));
+  document.body.classList.add('locked');
+  setTimeout(() => modalCloseBtn.focus(), 50);
+}
+
+function closeModal() {
+  if (!modalState.openId) return;
+  modalRoot.classList.remove('show');
+  modalRoot.setAttribute('aria-hidden', 'true');
+  setTimeout(() => {
+    modalRoot.classList.remove('open');
+    document.body.classList.remove('locked');
+    if (modalState.returnFocus) modalState.returnFocus.focus();
+    modalState.openId = null;
+  }, 200);
+}
+
+modalCloseBtn.addEventListener('click', closeModal);
+modalRoot.querySelectorAll('[data-modal-close]').forEach(el => el.addEventListener('click', closeModal));
+
+document.addEventListener('keydown', (e) => {
+  if (!modalState.openId) return;
+  if (e.key === 'Escape') { e.preventDefault(); closeModal(); }
+  if (e.key === 'Tab') {
+    // focus trap
+    const focusables = modalRoot.querySelectorAll('button, [href], [tabindex]:not([tabindex="-1"])');
+    const arr = Array.from(focusables).filter(el => !el.disabled && el.offsetParent !== null);
+    if (!arr.length) return;
+    const first = arr[0], last = arr[arr.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+});
+
+function renderModalContent(id) {
+  const p = productById[id];
+  if (!p) return;
+  const cat = p.categoryLabel[currentLang];
+  const tag = p.tagline[currentLang];
+  const desc = p.longDescription[currentLang];
+  const specs = p.techSpecs[currentLang] || p.techSpecs.tr;
+
+  modalCatEl.textContent = cat;
+  modalTopName.textContent = p.name;
+
+  // images
+  const galleryThumbs = p.images.map((label, i) => `
+    <button class="thumb relative w-full placeholder-bg ${i === modalState.activeImageIdx ? 'active' : ''}" data-img-idx="${i}" aria-label="${p.name} — image ${i+1}">
+      <span class="absolute bottom-1 left-1.5 font-mono text-[9px] text-[#6B7280] tracking-wider">${label.toUpperCase()}</span>
+    </button>
+  `).join('');
+
+  // spec rows
+  const specRows = Object.entries(specs).map(([k,v]) => `
+    <div class="grid grid-cols-2 gap-4 py-3 border-b border-ink-600 last:border-b-0">
+      <div class="text-[13px] text-[#9CA3AF]">${k}</div>
+      <div class="text-[13px] text-white font-medium">${v}</div>
+    </div>
+  `).join('');
+
+  // related
+  const related = (p.relatedIds || []).map(rid => productById[rid]).filter(Boolean).slice(0, 3);
+  const relatedCards = related.map(r => `
+    <article class="pcard border border-ink-600 rounded-lg bg-ink-800 overflow-hidden" data-related-id="${r.id}" tabindex="0" role="button">
+      ${imgPlaceholder(r.name, 'thumb', '4/3')}
+      <div class="p-4">
+        <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#22D3EE;font-weight:500;">${r.categoryLabel[currentLang]}</div>
+        <h4 class="mt-1.5 text-[14px] font-medium text-white">${r.name}</h4>
+        <p class="mt-1.5 text-[12px] text-[#9CA3AF] leading-[1.5]">${r.shortDescription[currentLang]}</p>
+      </div>
+    </article>
+  `).join('');
+
+  const viewsText = i18n[currentLang]['m.views'].replace('{n}', p.monthlyViews);
+
+  modalContent.innerHTML = `
+    <!-- top: two-column -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      <!-- gallery -->
+      <div>
+        <div id="modalMainImg" class="relative w-full placeholder-bg border border-ink-600 rounded-lg" style="aspect-ratio:4/3;">
+          <div class="absolute inset-0 grid place-items-center font-mono text-[12px] text-[#6B7280] tracking-wider">
+            ${p.name.replace(/\s+/g,'_').toUpperCase()}_${p.images[modalState.activeImageIdx].toUpperCase()}.JPG
+          </div>
+          ${p.isNew ? `<span class="absolute top-3 left-3 micro bg-cy text-ink-900 px-2 py-1 rounded font-semibold">${i18n[currentLang]['card.new']}</span>` : ''}
+        </div>
+        <div class="mt-3 grid grid-cols-4 gap-2" id="modalThumbs">
+          ${galleryThumbs}
+        </div>
+      </div>
+
+      <!-- info -->
+      <div class="flex flex-col">
+        <div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#22D3EE;font-weight:500;">${cat}</div>
+        <h2 id="modalTitle" class="mt-3 text-[32px] lg:text-[40px] font-medium text-white tracking-[-0.02em] leading-[1.05]">${p.name}</h2>
+        <p class="mt-4 text-[15px] lg:text-[16px] text-[#9CA3AF] leading-[1.6]">${tag}</p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          ${p.keySpecs.map(s => `<span class="text-[11px] font-mono text-cy border border-cy/40 bg-[#0F1623] rounded px-2.5 py-1">${s}</span>`).join('')}
+        </div>
+        <div class="mt-8 flex flex-col gap-3">
+          <a href="#iletisim" onclick="closeModal()" class="inline-flex items-center justify-center gap-2 bg-cy text-ink-900 font-medium text-[15px] px-5 py-3.5 rounded-md hover:bg-cy-soft transition">
+            <span>${i18n[currentLang]['m.cta1']}</span><span aria-hidden="true">→</span>
+          </a>
+          <a href="#" class="inline-flex items-center justify-center gap-2 border border-ink-500 text-white font-medium text-[14px] px-5 py-3.5 rounded-md hover:border-cy hover:text-cy transition">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v14m0 0l-5-5m5 5l5-5M5 21h14"/></svg>
+            <span>${i18n[currentLang]['m.cta2']}</span>
+          </a>
+        </div>
+        <div class="mt-5 text-[12px] text-[#6B7280] font-mono">${viewsText}</div>
+      </div>
+    </div>
+
+    <!-- divider -->
+    <div class="h-px bg-ink-600 my-10 lg:my-14"></div>
+
+    <!-- tech specs -->
+    <section>
+      <div class="micro text-cy mb-5">${i18n[currentLang]['m.tech']}</div>
+      <div class="border border-ink-600 rounded-lg divide-y divide-ink-600 px-5">
+        ${specRows}
+      </div>
+    </section>
+
+    <!-- description -->
+    <section class="mt-14">
+      <div class="micro text-cy mb-5">${i18n[currentLang]['m.desc']}</div>
+      <div class="space-y-4 text-[14px] lg:text-[15px] text-[#9CA3AF] leading-[1.8] max-w-3xl">
+        ${desc.map(par => `<p>${par}</p>`).join('')}
+      </div>
+    </section>
+
+    <!-- video -->
+    <section class="mt-14">
+      <div class="micro text-cy mb-5">${i18n[currentLang]['m.video']}</div>
+      <div class="relative aspect-video rounded-xl border border-ink-600 placeholder-bg overflow-hidden group cursor-pointer max-w-4xl">
+        <div class="absolute inset-0 grid place-items-center">
+          <div class="w-16 h-16 rounded-full border border-cy/60 bg-ink-900/60 grid place-items-center group-hover:bg-ink-900 group-hover:border-cy transition">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#22D3EE"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="absolute top-4 left-4 micro text-[#6B7280] font-mono">DEMO · ${p.name}</div>
+      </div>
+    </section>
+
+    <!-- related -->
+    ${related.length ? `
+    <section class="mt-14 mb-2">
+      <div class="micro text-cy mb-5">${i18n[currentLang]['m.related']}</div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        ${relatedCards}
+      </div>
+    </section>` : ''}
+  `;
+
+  // thumbnail clicks
+  modalContent.querySelectorAll('[data-img-idx]').forEach(t => {
+    t.addEventListener('click', () => {
+      modalState.activeImageIdx = parseInt(t.dataset.imgIdx, 10);
+      renderModalContent(modalState.openId);
+    });
+  });
+  // related clicks (switch product in-place, no close)
+  modalContent.querySelectorAll('[data-related-id]').forEach(r => {
+    const switchTo = () => {
+      modalState.openId = r.dataset.relatedId;
+      modalState.activeImageIdx = 0;
+      renderModalContent(modalState.openId);
+      const body = modalRoot.querySelector('.modal-body');
+      if (body) body.scrollTop = 0;
+    };
+    r.addEventListener('click', switchTo);
+    r.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); switchTo(); } });
+  });
+}
+// expose closeModal globally (used in CTA inline onclick)
+window.closeModal = closeModal;
+
+/* ---------- INIT ---------- */
+renderProducts('all');
+renderFeatured();
+renderSpecTable();
+renderWhy();
+renderServices();
+applyLang('tr');
+spy();
+</script>
+
+</body>
+</html>
