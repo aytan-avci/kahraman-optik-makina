@@ -886,27 +886,10 @@
               <div class="mt-2 contact-value font-medium" data-contact-whatsapp-display>+90 539 332 66 66</div>
             </a>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <a class="block rounded-xl bg-white border border-[#E2E8F0] p-5 hover:border-[#22D3EE] transition contact-card"
-              href="tel:+902120000000">
-              <div class="micro text-[#0F172A]/60" data-i18n="ct.phone">Telefon</div>
-              <div class="mt-2 contact-value font-medium">+90 212 000 00 00</div>
-            </a>
-            <a class="block rounded-xl bg-white border border-[#E2E8F0] p-5 hover:border-[#22D3EE] transition contact-card email-link"
-              href="#" data-user="info" data-domain="kahramanoptik.com">
-              <div class="micro text-[#0F172A]/60" data-i18n="ct.email">E-posta</div>
-              <div class="mt-2 contact-value font-medium email-display">&nbsp;</div>
-            </a>
-            <a class="block rounded-xl bg-white border border-[#E2E8F0] p-5 hover:border-[#22D3EE] transition sm:col-span-2 contact-card"
-              href="https://wa.me/905000000000">
-              <div class="micro text-[#0F172A]/60">WhatsApp</div>
-              <div class="mt-2 contact-value font-medium">+90 500 000 00 00</div>
-            </a>
-          </div>
-          <div class="rounded-xl overflow-hidden border border-[#E2E8F0] aspect-[5/3] relative"
+          <div class="rounded-xl overflow-hidden border border-[#E2E8F0] aspect-[5/3] relative" data-map-container
             style="background:repeating-linear-gradient(45deg,#E2E8F0 0 8px,#F1F5F9 8px 16px)">
             <div class="absolute inset-0 grid place-items-center text-[12px] font-mono text-[#64748B]"
-              data-i18n="ct.map">[ Google Maps embed ]</div>
+              data-i18n="ct.map" data-map-placeholder>[ Google Maps embed ]</div>
           </div>
           <div class="rounded-xl bg-white border border-[#E2E8F0] p-5">
             <div class="micro text-[#0F172A]/60" data-i18n="ct.hours">Çalışma saatleri</div>
@@ -1002,13 +985,15 @@
           <div class="mt-6 flex items-center gap-3">
             <a href="#" data-social-linkedin
               class="w-9 h-9 grid place-items-center border border-ink-600 rounded-md hover:border-cy hover:text-cy"
+              aria-label="LinkedIn"
+              class="w-9 h-9 grid place-items-center border border-ink-600 rounded-md hover:border-cy hover:text-cy"
               aria-label="LinkedIn">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.5 0h4.37v1.92h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.48 3.04 5.48 7v7.44h-4.56v-6.59c0-1.57-.03-3.59-2.19-3.59-2.19 0-2.52 1.71-2.52 3.48V22H7.72V8z" />
               </svg>
             </a>
-            <a href="#" data-social-instagram
+            <a href="#"  data-social-instagram
               class="w-9 h-9 grid place-items-center border border-ink-600 rounded-md hover:border-cy hover:text-cy"
               aria-label="Instagram">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1017,7 +1002,9 @@
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
               </svg>
             </a>
-            <a href="#" data-social-youtube
+            <a href="#"  data-social-youtube
+              class="w-9 h-9 grid place-items-center border border-ink-600 rounded-md hover:border-cy hover:text-cy"
+              aria-label="YouTube"
               class="w-9 h-9 grid place-items-center border border-ink-600 rounded-md hover:border-cy hover:text-cy"
               aria-label="YouTube">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -1031,8 +1018,7 @@
 
       <div
         class="mt-14 pt-6 border-t border-ink-600 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-[12px] text-[#6B7280] font-mono">
-          <div>© <span data-copyright-year>2026</span> <span data-company-name>Kahraman Optik</span> — Sedat Kahraman</div>
-          <div class="flex items-center gap-3">
+          <div>© <span data-copyright-year>2026</span> <span data-company-name>Kahraman Optik</span> — Sedat Kahraman</div>        <div class="flex items-center gap-3">
           <button data-lang="tr" class="lang-btn">TR</button>
           <span>|</span>
           <button data-lang="en" class="lang-btn">EN</button>
@@ -1386,8 +1372,7 @@
         'stat.years': 'Yıl tecrübe', 'stat.systems': 'Kurulu sistem', 'stat.precision': 'Hassasiyet', 'stat.support': 'Teknik destek',
         'cat.eyebrow': 'Ürün kataloğu', 'cat.title': 'Makineler ve cihazlar',
         'cat.sub': 'CNC cam kesim hatları ve optik ölçüm cihazları — üretim hacminize ve hassasiyet hedeflerinize göre yapılandırılır.',
-        'cat.f.all': 'Tümü', 'cat.f.cnc': 'CNC Kesim', 'cat.f.measure': 'Ölçüm Cihazları', 'cat.f.sarf': 'Sarf Malzemeleri',
-        'card.details': 'Detaylar', 'card.new': 'YENİ',
+        'cat.f.all': 'Tümü', 'cat.f.cnc': 'CNC Kesim', 'cat.f.measure': 'Ölçüm Cihazları', 'cat.f.sarf': 'Sarf Malzemeleri',        'card.details': 'Detaylar', 'card.new': 'YENİ',
         'feat.eyebrow': 'Bu ay vurgulanan', 'feat.title': 'Öne çıkan ürünler', 'feat.cta': 'Detayları Gör',
         'm.close': 'Modalı kapat',
         'm.tech': 'Teknik Özellikler',
@@ -1437,8 +1422,7 @@
         'stat.years': 'Years of experience', 'stat.systems': 'Installed systems', 'stat.precision': 'Precision', 'stat.support': 'Technical support',
         'cat.eyebrow': 'Product catalog', 'cat.title': 'Machines and devices',
         'cat.sub': 'CNC glass cutting lines and optical measurement devices — configured to your production volume and precision targets.',
-        'cat.f.all': 'All', 'cat.f.cnc': 'CNC Cutting', 'cat.f.measure': 'Measurement', 'cat.f.sarf': 'Consumables',
-        'card.details': 'Details', 'card.new': 'NEW',
+        'cat.f.all': 'All', 'cat.f.cnc': 'CNC Cutting', 'cat.f.measure': 'Measurement', 'cat.f.sarf': 'Consumables',        'card.details': 'Details', 'card.new': 'NEW',
         'feat.eyebrow': 'Highlighted this month', 'feat.title': 'Featured products', 'feat.cta': 'View Details',
         'm.close': 'Close modal',
         'm.tech': 'Technical Specifications',
@@ -1503,6 +1487,40 @@
     /* ---------- RENDER: PRODUCTS ---------- */
     let currentFilter = 'all';
 
+    // ─── Fiyat formatla (Türkçe lokal: 4.500 ₺) ───
+    function formatPrice(amount, currency) {
+      const symbols = { TRY: '₺', USD: '$', EUR: '€' };
+      const sym = symbols[currency] || currency || '₺';
+      const formatted = Number(amount).toLocaleString('tr-TR');
+      return currency === 'TRY' ? `${formatted} ${sym}` : `${sym}${formatted}`;
+    }
+
+    // ─── Fiyat HTML'i (kart, modal vs.) ───
+    // variant: 'card' (varsayılan), 'featured', 'modal'
+    function priceHtml(p, variant) {
+      if (!p.showPrice || !p.price) return ''; // fiyat yoksa hiçbir şey gösterme
+      const priceText = formatPrice(p.price, p.priceCurrency);
+      const note = p.priceNote ? `<span class="text-[11px] text-[#9CA3AF] ml-1">${p.priceNote}</span>` : '';
+
+      if (variant === 'modal') {
+        return `
+      <div class="mt-1 flex items-baseline gap-2">
+        <span class="text-[24px] font-medium text-cy">${priceText}</span>
+        ${p.priceNote ? `<span class="text-[12px] text-[#9CA3AF]">${p.priceNote}</span>` : ''}
+      </div>
+    `;
+      }
+      if (variant === 'featured') {
+        return `
+      <div class="text-[18px] font-medium text-cy">${priceText}${note}</div>
+    `;
+      }
+      // default = card
+      return `
+      <div class="mt-1 text-[15px] font-medium text-cy">${priceText}${note}</div>
+    `;
+    }
+
     function imgPlaceholder(name, label, ratio) {
       const aspect = ratio || '4/3';
       return `
@@ -1510,6 +1528,21 @@
       <div class="font-mono text-[11px] text-[#6B7280] tracking-wider">${name.replace(/\s+/g, '_').toUpperCase()}_${label}.JPG</div>
     </div>
   `;
+    }
+
+    // Sanity'den gelen görseli göster, yoksa placeholder düş
+    function productImage(p, label, ratio, idx) {
+      const aspect = ratio || '4/3';
+      const imgIdx = idx || 0;
+      const url = p.imageUrls && p.imageUrls[imgIdx];
+      if (url) {
+        return `
+    <div class="relative w-full border-b border-ink-600 overflow-hidden" style="aspect-ratio:${aspect}; background:#0F172A">
+      <img src="${url}" alt="${p.name}" loading="lazy" class="absolute inset-0 w-full h-full object-cover" />
+    </div>
+  `;
+      }
+      return imgPlaceholder(p.name, label, ratio);
     }
 
     function renderProducts(filter) {
@@ -1523,11 +1556,12 @@
         return `
       <article class="pcard relative border border-ink-600 rounded-xl bg-ink-700 overflow-hidden flex flex-col" data-product-id="${p.id}" tabindex="0" role="button" aria-label="${p.name}">
         ${badge}
-        ${imgPlaceholder(p.name, 'main', '4/3')}
+        ${productImage(p, 'main', '4/3', 0)}
         <div class="p-5 flex flex-col gap-2">
           <div style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#22D3EE;font-weight:500;">${cat}</div>
           <h3 class="text-[16px] font-medium text-white">${p.name}</h3>
           <p class="text-[13px] text-[#9CA3AF] leading-[1.5]">${desc}</p>
+          ${priceHtml(p)}
           <div class="mt-3 pt-4 border-t border-ink-600 flex items-center justify-between">
             <span class="font-mono text-[10px] text-[#6B7280] tracking-wider">${p.id.toUpperCase()}</span>
             <span class="text-cy text-[13px] font-medium pcard-link inline-flex items-center gap-1.5">
@@ -1556,7 +1590,7 @@
         const tag = p.tagline[currentLang];
         return `
       <article class="featured-card relative border border-ink-600 rounded-xl bg-ink-700 overflow-hidden flex flex-col" data-product-id="${p.id}" tabindex="0" role="button" aria-label="${p.name}">
-        ${imgPlaceholder(p.name, 'hero', '16/9')}
+        ${productImage(p, 'hero', '16/9', 0)}
         <div class="p-7 lg:p-9 flex flex-col gap-4">
           <div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#22D3EE;font-weight:500;">${cat}</div>
           <h3 class="text-[24px] lg:text-[28px] font-medium text-white tracking-[-0.01em] leading-[1.2]">${p.name}</h3>
@@ -1564,6 +1598,7 @@
           <div class="flex flex-wrap gap-2 mt-1">
             ${p.keySpecs.map(s => `<span class="text-[11px] font-mono text-cy border border-cy/40 bg-[#0F1623] rounded px-2.5 py-1">${s}</span>`).join('')}
           </div>
+          ${priceHtml(p, 'featured')}
           <div class="mt-3 flex items-center justify-between gap-3">
             <span class="inline-flex items-center gap-2 bg-cy text-ink-900 font-medium text-[14px] px-5 py-3 rounded-md feat-arrow-wrap">
               <span>${i18n[currentLang]['feat.cta']}</span>
@@ -1779,12 +1814,26 @@
       modalCatEl.textContent = cat;
       modalTopName.textContent = p.name;
 
-      // images
-      const galleryThumbs = p.images.map((label, i) => `
-    <button class="thumb relative w-full placeholder-bg ${i === modalState.activeImageIdx ? 'active' : ''}" data-img-idx="${i}" aria-label="${p.name} — image ${i + 1}">
-      <span class="absolute bottom-1 left-1.5 font-mono text-[9px] text-[#6B7280] tracking-wider">${label.toUpperCase()}</span>
+      // images — Sanity'den varsa onu, yoksa eski placeholder etiketleri kullan
+      const useRealImages = p.imageUrls && p.imageUrls.length > 0;
+      const galleryItems = useRealImages
+        ? p.imageUrls.map((url, i) => ({ type: 'image', url, idx: i }))
+        : p.images.map((label, i) => ({ type: 'placeholder', label, idx: i }));
+
+      const galleryThumbs = galleryItems.map((it, i) => {
+        if (it.type === 'image') {
+          return `
+    <button class="thumb relative w-full overflow-hidden ${i === modalState.activeImageIdx ? 'active' : ''}" data-img-idx="${i}" aria-label="${p.name} — image ${i + 1}" style="aspect-ratio:1; background:#0F172A">
+      <img src="${it.url}" alt="${p.name}" loading="lazy" class="absolute inset-0 w-full h-full object-cover" />
     </button>
-  `).join('');
+  `;
+        }
+        return `
+    <button class="thumb relative w-full placeholder-bg ${i === modalState.activeImageIdx ? 'active' : ''}" data-img-idx="${i}" aria-label="${p.name} — image ${i + 1}">
+      <span class="absolute bottom-1 left-1.5 font-mono text-[9px] text-[#6B7280] tracking-wider">${it.label.toUpperCase()}</span>
+    </button>
+  `;
+      }).join('');
 
       // spec rows
       const specRows = Object.entries(specs).map(([k, v]) => `
@@ -1798,7 +1847,7 @@
       const related = (p.relatedIds || []).map(rid => productById[rid]).filter(Boolean).slice(0, 3);
       const relatedCards = related.map(r => `
     <article class="pcard border border-ink-600 rounded-lg bg-ink-800 overflow-hidden" data-related-id="${r.id}" tabindex="0" role="button">
-      ${imgPlaceholder(r.name, 'thumb', '4/3')}
+      ${productImage(r, 'thumb', '4/3', 0)}
       <div class="p-4">
         <div style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#22D3EE;font-weight:500;">${r.categoryLabel[currentLang]}</div>
         <h4 class="mt-1.5 text-[14px] font-medium text-white">${r.name}</h4>
@@ -1814,11 +1863,14 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
       <!-- gallery -->
       <div>
-        <div id="modalMainImg" class="relative w-full placeholder-bg border border-ink-600 rounded-lg" style="aspect-ratio:4/3;">
-          <div class="absolute inset-0 grid place-items-center font-mono text-[12px] text-[#6B7280] tracking-wider">
+        <div id="modalMainImg" class="relative w-full border border-ink-600 rounded-lg overflow-hidden" style="aspect-ratio:4/3; background:#0F172A;">
+          ${useRealImages
+            ? `<img src="${p.imageUrls[modalState.activeImageIdx] || p.imageUrls[0]}" alt="${p.name}" class="absolute inset-0 w-full h-full object-cover" />`
+            : `<div class="absolute inset-0 placeholder-bg grid place-items-center font-mono text-[12px] text-[#6B7280] tracking-wider">
             ${p.name.replace(/\s+/g, '_').toUpperCase()}_${p.images[modalState.activeImageIdx].toUpperCase()}.JPG
-          </div>
-          ${p.isNew ? `<span class="absolute top-3 left-3 micro bg-cy text-ink-900 px-2 py-1 rounded font-semibold">${i18n[currentLang]['card.new']}</span>` : ''}
+          </div>`
+          }
+          ${p.isNew ? `<span class="absolute top-3 left-3 micro bg-cy text-ink-900 px-2 py-1 rounded font-semibold z-10">${i18n[currentLang]['card.new']}</span>` : ''}
         </div>
         <div class="mt-3 grid grid-cols-4 gap-2" id="modalThumbs">
           ${galleryThumbs}
@@ -1833,6 +1885,7 @@
         <div class="mt-6 flex flex-wrap gap-2">
           ${p.keySpecs.map(s => `<span class="text-[11px] font-mono text-cy border border-cy/40 bg-[#0F1623] rounded px-2.5 py-1">${s}</span>`).join('')}
         </div>
+        ${priceHtml(p, 'modal')}
         <div class="mt-8 flex flex-col gap-3">
           <a href="#iletisim" data-quote-cta class="inline-flex items-center justify-center gap-2 bg-cy text-ink-900 font-medium text-[15px] px-5 py-3.5 rounded-md hover:bg-cy-soft transition">
             <span>${i18n[currentLang]['m.cta1']}</span><span aria-hidden="true">→</span>
@@ -2026,7 +2079,26 @@
           tr: blocksToParagraphs(sp.longDescriptionTR),
           en: blocksToParagraphs(sp.longDescriptionEN),
         },
-        images: ['main', 'angle', 'detail', 'context'], // placeholder etiketleri (mevcut imgPlaceholder uyumu)
+        // ─── GÖRSELLER (Sanity CDN'den) ───
+        // mainImage + gallery'yi tek bir URL dizisine birleştir
+        imageUrls: (() => {
+          const urls = [];
+          if (sp.mainImage && window.urlFor) {
+            try {
+              urls.push(window.urlFor(sp.mainImage).width(1200).url());
+            } catch (e) { /* görsel yoksa atla */ }
+          }
+          if (Array.isArray(sp.gallery) && window.urlFor) {
+            sp.gallery.forEach(img => {
+              try {
+                urls.push(window.urlFor(img).width(1200).url());
+              } catch (e) { /* atla */ }
+            });
+          }
+          return urls;
+        })(),
+        // Eski uyumluluk için placeholder etiketleri korunuyor
+        images: ['main', 'angle', 'detail', 'context'],
         keySpecs: Array.isArray(sp.keySpecs) ? sp.keySpecs : [],
         techSpecs: {
           tr: techToObj(sp.techSpecsTR),
@@ -2158,6 +2230,25 @@
         setSocial('[data-social-linkedin]', siteSettings.linkedinUrl);
         setSocial('[data-social-instagram]', siteSettings.instagramUrl);
         setSocial('[data-social-youtube]', siteSettings.youtubeUrl);
+
+        // ─── GOOGLE MAPS IFRAME ───
+        if (siteSettings.mapEmbedUrl) {
+          const mapContainer = document.querySelector('[data-map-container]');
+          if (mapContainer) {
+            // URL temiz mi kontrol et (sadece google.com/maps/embed izinli)
+            const url = siteSettings.mapEmbedUrl;
+            const isGoogleEmbed = url.startsWith('https://www.google.com/maps/embed');
+            if (isGoogleEmbed) {
+              mapContainer.innerHTML = `
+                <iframe src="${url}" width="100%" height="100%" style="border:0;"
+                  allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="absolute inset-0"></iframe>
+              `;
+              mapContainer.style.background = 'transparent';
+            }
+          }
+        }
       }
     }
 

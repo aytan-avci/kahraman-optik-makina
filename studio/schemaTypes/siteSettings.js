@@ -95,6 +95,13 @@ export default {
       description: 'Örn: "905321234567" (başında + yok, sadece sayılar).',
       group: 'contact',
     },
+    {
+      name: 'mapEmbedUrl',
+      title: 'Google Maps Embed URL',
+      type: 'url',
+      description: '⚠️ ÖNEMLİ: Sadece "https://www.google.com/maps/embed?..." formatında olmalı. Google Maps\'te konumu aç → Paylaş → "Bir harita yerleştir" → iframe kodundan src="" içindeki URL\'i kopyala (tam URL, sadece adres değil).',
+      group: 'contact',
+    },
 
     // ═══════════════════════════════════════════
     // 🦶 ALT BİLGİ (FOOTER)
